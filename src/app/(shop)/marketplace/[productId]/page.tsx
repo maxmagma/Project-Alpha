@@ -9,9 +9,9 @@ import { formatPrice } from '@/lib/utils/format'
 export const revalidate = 3600
 
 interface PageProps {
-  params: {
+  params: Promise<{
     productId: string
-  }
+  }>
 }
 
 async function getProduct(productId: string) {
@@ -29,7 +29,8 @@ async function getProduct(productId: string) {
 }
 
 export async function generateMetadata({ params }: PageProps) {
-  const product = await getProduct(params.productId)
+  const { productId } = await params
+  const product = await getProduct(productId)
 
   if (!product) {
     return {
@@ -44,7 +45,8 @@ export async function generateMetadata({ params }: PageProps) {
 }
 
 export default async function ProductPage({ params }: PageProps) {
-  const product = await getProduct(params.productId)
+  const { productId } = await params
+  const product = await getProduct(productId)
 
   if (!product) {
     notFound()

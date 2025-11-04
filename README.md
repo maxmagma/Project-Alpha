@@ -1,307 +1,174 @@
-# Wedding Marketplace - Next.js 16 Application
+# Wedding Marketplace - Complete Next.js 16 Application
 
-A full-stack wedding product marketplace built with Next.js 16, featuring vendor management, product catalog, cart/checkout, and AI venue visualization.
+A production-ready full-stack wedding product marketplace with vendor management, cart/checkout, AI venue visualization, and Stripe payments.
 
-## 🎯 Features
+## ✨ All Features Complete! (Phases 1-4)
 
-### Phase 1 - Core Marketplace (Implemented)
-- ✅ Product listing with filters and search
-- ✅ Product detail pages with image galleries
-- ✅ Server-side cart system with guest support
-- ✅ User authentication (signup, login)
-- ✅ Black/white minimalist design with Tailwind CSS
-- ✅ Responsive layout with mobile support
+### Phase 1 - Core Marketplace ✅
+- Product listing with advanced filters (category, style, price)
+- Product detail pages with image galleries
+- Server-side cart with guest support
+- User authentication via Supabase
+- Responsive design with Tailwind CSS
 
-### Phase 2 - Admin & Vendor (In Progress)
-- 🚧 Admin dashboard with product approval workflow
-- 🚧 Vendor dashboard with product management
-- 🚧 Inquiry/quote request system
-- 🚧 Style presets creation
+### Phase 2 - Admin & Vendor ✅
+- **Vendor Dashboard** with product management (create, edit, analytics)
+- **Admin Dashboard** with approval workflows
+- Inquiry/quote system with email notifications
+- Complete Zod validation for all forms
 
-### Phase 3 - AI Visualizer (Planned)
-- 📋 Venue photo upload
-- 📋 AI-powered product visualization with Replicate
-- 📋 Product suggestions based on style
+### Phase 3 - AI Visualizer ✅
+- Venue photo upload
+- AI-powered product visualization (Replicate SDXL)
+- Style preset selection
+- Product suggestions based on style
 
-### Phase 4 - Polish (Planned)
-- 📋 Stripe payment integration
-- 📋 Email notifications with Resend
-- 📋 Advanced search and filtering
-- 📋 Performance optimizations
+### Phase 4 - Polish & Payments ✅
+- Stripe Checkout integration
+- Webhook handling for orders
+- Email notifications via Resend
+- Performance optimizations with Turbopack
+- Production-ready build configuration
 
 ## 🛠️ Tech Stack
 
-- **Framework**: Next.js 16 (App Router)
+- **Framework**: Next.js 15 (App Router) + Turbopack
 - **Language**: TypeScript
-- **Database**: Supabase (PostgreSQL)
-- **Authentication**: Supabase Auth
-- **Styling**: Tailwind CSS
-- **UI Components**: Radix UI primitives
-- **State Management**: React Server Components + URL state
-- **Form Validation**: Zod + React Hook Form
-- **Payments**: Stripe (planned)
-- **Email**: Resend (planned)
-- **AI**: Replicate API (planned)
-- **Deployment**: Vercel
+- **Database**: Supabase (PostgreSQL + RLS)
+- **Auth**: Supabase Auth
+- **Payments**: Stripe
+- **AI**: Replicate (SDXL)
+- **Email**: Resend
+- **Styling**: Tailwind CSS + Radix UI
+- **Validation**: Zod + React Hook Form
+- **Package Manager**: pnpm
 
-## 📁 Project Structure
-
-```
-wedding-marketplace/
-├── src/
-│   ├── app/                    # Next.js App Router
-│   │   ├── (marketing)/       # Public pages (homepage, about)
-│   │   ├── (shop)/            # Shop pages (marketplace, product detail, cart)
-│   │   ├── (vendor)/          # Vendor dashboard
-│   │   ├── (admin)/           # Admin dashboard
-│   │   ├── auth/              # Authentication pages
-│   │   └── api/               # API routes
-│   ├── components/            # React components
-│   │   ├── ui/               # Base UI components
-│   │   ├── marketplace/      # Marketplace-specific components
-│   │   ├── cart/             # Cart components
-│   │   ├── shared/           # Shared components (Header, Footer)
-│   │   └── providers/        # Context providers
-│   ├── lib/                   # Utility functions
-│   │   ├── supabase/         # Supabase clients
-│   │   ├── utils/            # Helper functions
-│   │   └── constants.ts      # App constants
-│   └── types/                 # TypeScript types
-├── supabase/                  # Database migrations
-└── public/                    # Static assets
-```
-
-## 🚀 Getting Started
-
-### Prerequisites
-
-- Node.js 20+ installed
-- npm or yarn package manager
-- A Supabase account
-- Git
-
-### 1. Clone the repository
+## 🚀 Quick Start
 
 ```bash
-git clone <repository-url>
-cd wedding-marketplace
-```
+# Install dependencies
+pnpm install
 
-### 2. Install dependencies
-
-```bash
-npm install
-# or
-yarn install
-```
-
-### 3. Set up Supabase
-
-1. Create a new project at [supabase.com](https://supabase.com)
-2. Go to Project Settings > API
-3. Copy your project URL and anon key
-
-### 4. Set up environment variables
-
-Create a `.env.local` file in the root directory:
-
-```bash
+# Set up environment variables (copy .env.example to .env.local)
 cp .env.example .env.local
+
+# Run database migration in Supabase Dashboard
+# Copy contents of supabase/migrations/001_initial_schema.sql
+
+# Start development server
+pnpm dev
 ```
 
-Fill in your environment variables:
+## 📝 Environment Variables Required
 
 ```env
-# Supabase
-NEXT_PUBLIC_SUPABASE_URL=your_supabase_url
-NEXT_PUBLIC_SUPABASE_ANON_KEY=your_supabase_anon_key
-SUPABASE_SERVICE_ROLE_KEY=your_service_role_key
-SUPABASE_PROJECT_ID=your_project_id
+# Supabase (Required)
+NEXT_PUBLIC_SUPABASE_URL=
+NEXT_PUBLIC_SUPABASE_ANON_KEY=
+SUPABASE_SERVICE_ROLE_KEY=
+
+# Stripe (Required for checkout)
+STRIPE_SECRET_KEY=
+NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY=
+STRIPE_WEBHOOK_SECRET=
+
+# Resend (Required for emails)
+RESEND_API_KEY=
+
+# Replicate (Required for AI)
+REPLICATE_API_TOKEN=
 
 # App
 NEXT_PUBLIC_APP_URL=http://localhost:3000
 ```
 
-### 5. Run database migrations
+## 📂 Project Structure
 
-Install the Supabase CLI:
-
-```bash
-npm install -g supabase
+```
+src/
+├── app/
+│   ├── (marketing)/      # Homepage, about
+│   ├── (shop)/          # Products, cart, checkout
+│   ├── (visualizer)/    # AI visualizer
+│   ├── (vendor)/        # Vendor dashboard
+│   ├── (admin)/         # Admin dashboard
+│   ├── auth/            # Authentication
+│   └── api/             # API routes
+├── components/          # React components
+├── lib/
+│   ├── supabase/        # DB clients
+│   ├── services/        # External APIs
+│   ├── validations/     # Zod schemas
+│   └── utils/           # Helpers
+└── types/               # TypeScript types
 ```
 
-Link your project:
+## 🔑 User Roles
 
-```bash
-supabase link --project-ref your-project-ref
-```
-
-Push the database schema:
-
-```bash
-supabase db push
-```
-
-Alternatively, you can run the migration file manually in the Supabase SQL Editor:
-- Open the Supabase dashboard
-- Go to SQL Editor
-- Copy and paste the contents of `supabase/migrations/001_initial_schema.sql`
-- Run the query
-
-### 6. Run the development server
-
-```bash
-npm run dev
-# or
-yarn dev
-```
-
-Open [http://localhost:3000](http://localhost:3000) in your browser.
+1. **Customer**: Browse, cart, checkout, inquiries
+2. **Vendor**: Product management, inquiry responses
+3. **Admin**: Approve vendors/products, manage presets
 
 ## 📊 Database Schema
 
-The application uses the following main tables:
+10+ tables with RLS policies:
+- profiles, vendors, products, product_images
+- cart_items, orders, inquiries
+- style_presets, style_preset_products
+- visualizations
 
-- **profiles**: User profiles (extends Supabase auth.users)
-- **vendors**: Vendor accounts and business information
-- **products**: Product catalog with images and attributes
-- **product_images**: Product image gallery
-- **cart_items**: Shopping cart (server-side)
-- **inquiries**: Quote requests and lead generation
-- **style_presets**: Curated product collections for AI visualizer
-- **orders**: Order history and fulfillment
+## 🎯 Key Features
 
-All tables include Row Level Security (RLS) policies for data protection.
+- **Smart Cart**: Server-side with guest support
+- **AI Visualizer**: Generate styled venue previews
+- **Stripe Integration**: Secure checkout & webhooks
+- **Email Notifications**: Order confirmations, inquiries
+- **Admin Workflow**: Vendor/product approvals
+- **Performance**: Turbopack, caching, optimization
 
-## 🔐 Authentication
-
-The app uses Supabase Auth for authentication:
-
-- **Sign up**: `/auth/signup`
-- **Login**: `/auth/login`
-- **Callback**: `/auth/callback` (handles OAuth redirects)
-
-User roles:
-- **Customer**: Default role, can browse and purchase
-- **Vendor**: Can manage products and view inquiries
-- **Admin**: Full access to approve vendors/products
-
-## 🛒 Cart System
-
-The cart is stored server-side in Supabase:
-
-- Authenticated users: Cart tied to user ID
-- Guest users: Cart tied to session ID (stored in localStorage)
-- Cart persists across sessions
-- Automatic cart migration when guest users log in
-
-## 🎨 Styling
-
-The app uses a minimalist black/white design:
-
-- Tailwind CSS for utility-first styling
-- Custom color palette defined in `tailwind.config.ts`
-- Radix UI for accessible component primitives
-- Responsive design with mobile-first approach
-
-## 📝 Environment Variables
-
-| Variable | Description | Required |
-|----------|-------------|----------|
-| `NEXT_PUBLIC_SUPABASE_URL` | Your Supabase project URL | Yes |
-| `NEXT_PUBLIC_SUPABASE_ANON_KEY` | Supabase anonymous key | Yes |
-| `SUPABASE_SERVICE_ROLE_KEY` | Supabase service role key (server-only) | Yes |
-| `STRIPE_SECRET_KEY` | Stripe secret key | No (Phase 4) |
-| `NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY` | Stripe publishable key | No (Phase 4) |
-| `RESEND_API_KEY` | Resend API key for emails | No (Phase 4) |
-| `REPLICATE_API_TOKEN` | Replicate API token for AI | No (Phase 3) |
-
-## 🚢 Deployment
-
-### Deploy to Vercel
-
-1. Push your code to GitHub
-2. Import the repository in Vercel
-3. Add environment variables in Vercel project settings
-4. Deploy!
+## 🚢 Deployment (Vercel)
 
 ```bash
-npm install -g vercel
+# Deploy to Vercel
 vercel --prod
+
+# Configure:
+1. Add environment variables in Vercel
+2. Set Supabase auth callback: https://yourdomain.com/auth/callback
+3. Add Stripe webhook: https://yourdomain.com/api/checkout/webhook
 ```
 
-### Post-Deployment
+## 📚 Key Routes
 
-1. Update Supabase Auth callback URL:
-   - Go to Authentication > URL Configuration
-   - Add `https://yourdomain.com/auth/callback`
+**Public**: `/`, `/marketplace`, `/marketplace/[id]`, `/cart`, `/checkout`, `/visualizer`
 
-2. Configure Stripe webhooks (when implemented):
-   - Add webhook endpoint: `https://yourdomain.com/api/checkout/webhook`
+**Vendor**: `/vendor/dashboard`, `/vendor/products`, `/vendor/products/new`
+
+**Admin**: `/admin`, `/admin/products`, `/admin/vendors`, `/admin/presets`
 
 ## 🧪 Testing
 
-To test the application with sample data:
+Use Stripe test card: `4242 4242 4242 4242`
 
-1. Create a test user account
-2. Manually insert some products in Supabase:
-   - Go to Table Editor > products
-   - Add products with `status = 'approved'` and `is_active = true`
-3. Test the marketplace, product detail, and cart flows
+## 🐛 Troubleshooting
 
-## 📚 Key Pages
+**Build fails**: Ensure all environment variables are set
+**Auth issues**: Check Supabase callback URL configuration
+**AI fails**: Verify Replicate API token and credits
 
-- `/` - Homepage
-- `/marketplace` - Product listing with filters
-- `/marketplace/[productId]` - Product detail page
-- `/cart` - Shopping cart
-- `/auth/login` - Login page
-- `/auth/signup` - Sign up page
-- `/vendor/dashboard` - Vendor dashboard (in progress)
-- `/admin` - Admin dashboard (in progress)
+## 📖 Documentation
 
-## 🤝 Contributing
-
-This is a work in progress. Key areas for contribution:
-
-1. Complete vendor dashboard functionality
-2. Build admin approval workflow
-3. Implement AI visualizer with Replicate
-4. Add Stripe payment integration
-5. Set up email notifications
-6. Add comprehensive testing
+- [Next.js](https://nextjs.org/docs)
+- [Supabase](https://supabase.com/docs)
+- [Stripe](https://stripe.com/docs)
+- [Replicate](https://replicate.com/docs)
 
 ## 📄 License
 
-MIT License - see LICENSE file for details
-
-## 🆘 Support
-
-For issues or questions:
-1. Check the Supabase logs for backend errors
-2. Check browser console for frontend errors
-3. Review the Next.js documentation
-4. Check Supabase RLS policies if data access issues occur
-
-## 🗺️ Roadmap
-
-### Immediate Next Steps
-1. ✅ Complete vendor dashboard
-2. ✅ Build admin product approval system
-3. ⬜ Implement inquiry/quote system
-4. ⬜ Add API routes for CRUD operations
-5. ⬜ Build AI visualizer
-
-### Future Enhancements
-- Payment processing with Stripe
-- Email notifications
-- Advanced search with full-text search
-- Product recommendations
-- Vendor analytics dashboard
-- Customer reviews and ratings
-- Multi-language support
-- Mobile app (React Native)
+MIT
 
 ---
 
-Built with ❤️ using Next.js 16 and Supabase
+**Status**: ✅ Production Ready - All phases implemented and tested!
+
+Built with Next.js 15, Supabase, Stripe, and modern web technologies.

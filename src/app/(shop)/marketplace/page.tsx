@@ -9,16 +9,24 @@ import { ITEMS_PER_PAGE } from '@/lib/constants'
 export const revalidate = 3600 // Revalidate every hour
 
 interface PageProps {
-  searchParams: {
+  searchParams: Promise<{
     category?: string
     style?: string
     price?: string
     search?: string
     page?: string
-  }
+  }>
 }
 
-async function getProducts(filters: PageProps['searchParams']) {
+type SearchParamsType = {
+  category?: string
+  style?: string
+  price?: string
+  search?: string
+  page?: string
+}
+
+async function getProducts(filters: SearchParamsType) {
   const supabase = await createClient()
 
   let query = supabase
@@ -61,7 +69,8 @@ async function getProducts(filters: PageProps['searchParams']) {
 }
 
 export default async function MarketplacePage({ searchParams }: PageProps) {
-  const { products, totalCount } = await getProducts(searchParams)
+  const filters = await searchParams
+  const { products, totalCount } = await getProducts(filters)
 
   return (
     <div className="min-h-screen">
