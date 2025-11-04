@@ -5,7 +5,7 @@ interface SEOProps {
   description: string
   canonical?: string
   ogImage?: string
-  ogType?: 'website' | 'article' | 'product'
+  ogType?: 'website' | 'article'
   price?: number
   currency?: string
   availability?: 'in stock' | 'out of stock' | 'preorder'

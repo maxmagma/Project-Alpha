@@ -87,7 +87,7 @@ export default function HomePage() {
           <Link href="/marketplace">
             <Button size="lg">
               Get Started
-              <ArrowRight className="ml-2 h-5 w-5" />
+              <ArrowRightIcon className="ml-2 h-5 w-5" />
             </Button>
           </Link>
         </div>
