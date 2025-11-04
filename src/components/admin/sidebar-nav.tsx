@@ -4,14 +4,14 @@ import Link from 'next/link'
 import { usePathname } from 'next/navigation'
 import { cn } from '@/lib/utils/cn'
 import {
-  LayoutDashboard,
-  Package,
-  Users,
-  MessageSquare,
-  Settings,
-  Palette,
-  ShoppingBag,
-} from 'lucide-react'
+  Squares2X2Icon,
+  CubeIcon,
+  UsersIcon,
+  ChatBubbleLeftRightIcon,
+  Cog6ToothIcon,
+  PaintBrushIcon,
+  ShoppingBagIcon,
+} from '@heroicons/react/24/outline'
 
 interface SidebarNavProps {
   role: 'vendor' | 'admin'
@@ -21,22 +21,22 @@ const vendorItems = [
   {
     title: 'Dashboard',
     href: '/vendor/dashboard',
-    icon: LayoutDashboard,
+    icon: Squares2X2Icon,
   },
   {
     title: 'Products',
     href: '/vendor/products',
-    icon: Package,
+    icon: CubeIcon,
   },
   {
     title: 'Inquiries',
     href: '/vendor/inquiries',
-    icon: MessageSquare,
+    icon: ChatBubbleLeftRightIcon,
   },
   {
     title: 'Settings',
     href: '/vendor/settings',
-    icon: Settings,
+    icon: Cog6ToothIcon,
   },
 ]
 
@@ -44,37 +44,37 @@ const adminItems = [
   {
     title: 'Dashboard',
     href: '/admin',
-    icon: LayoutDashboard,
+    icon: Squares2X2Icon,
   },
   {
     title: 'Products',
     href: '/admin/products',
-    icon: Package,
+    icon: CubeIcon,
   },
   {
     title: 'Vendors',
     href: '/admin/vendors',
-    icon: Users,
+    icon: UsersIcon,
   },
   {
     title: 'Inquiries',
     href: '/admin/inquiries',
-    icon: MessageSquare,
+    icon: ChatBubbleLeftRightIcon,
   },
   {
     title: 'Style Presets',
     href: '/admin/presets',
-    icon: Palette,
+    icon: PaintBrushIcon,
   },
   {
     title: 'Orders',
     href: '/admin/orders',
-    icon: ShoppingBag,
+    icon: ShoppingBagIcon,
   },
   {
     title: 'Settings',
     href: '/admin/settings',
-    icon: Settings,
+    icon: Cog6ToothIcon,
   },
 ]
 

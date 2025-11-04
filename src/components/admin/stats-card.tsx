@@ -1,11 +1,12 @@
 import Link from 'next/link'
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card'
-import { ArrowRight, LucideIcon } from 'lucide-react'
+import { ArrowRightIcon } from '@heroicons/react/24/outline'
+import React from 'react'
 
 interface StatsCardProps {
   title: string
   value: number | string
-  icon?: LucideIcon
+  icon?: React.ComponentType<{ className?: string }>
   href?: string
   description?: string
   trend?: {
@@ -40,7 +41,7 @@ export function StatsCard({ title, value, icon: Icon, href, description, trend }
         {href && (
           <div className="flex items-center gap-1 mt-2 text-sm text-primary">
             View all
-            <ArrowRight className="h-4 w-4" />
+            <ArrowRightIcon className="h-4 w-4" />
           </div>
         )}
       </CardContent>

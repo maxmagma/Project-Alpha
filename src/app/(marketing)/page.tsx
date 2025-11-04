@@ -1,6 +1,6 @@
 import Link from 'next/link'
 import { Button } from '@/components/ui/button'
-import { ArrowRight, Sparkles, ShoppingBag, Users } from 'lucide-react'
+import { ArrowRightIcon, SparklesIcon, ShoppingBagIcon, UsersIcon } from '@heroicons/react/24/outline'
 
 export default function HomePage() {
   return (
@@ -21,13 +21,13 @@ export default function HomePage() {
               <Link href="/marketplace">
                 <Button size="lg" variant="outline" className="bg-white text-black hover:bg-gray-100 border-white">
                   Browse Marketplace
-                  <ArrowRight className="ml-2 h-5 w-5" />
+                  <ArrowRightIcon className="ml-2 h-5 w-5" />
                 </Button>
               </Link>
               <Link href="/visualizer">
                 <Button size="lg" variant="outline" className="border-white text-white hover:bg-white/10">
                   Try AI Visualizer
-                  <Sparkles className="ml-2 h-5 w-5" />
+                  <SparklesIcon className="ml-2 h-5 w-5" />
                 </Button>
               </Link>
             </div>
@@ -44,7 +44,7 @@ export default function HomePage() {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
             <div className="text-center">
               <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-secondary mb-6">
-                <ShoppingBag className="h-8 w-8" />
+                <ShoppingBagIcon className="h-8 w-8" />
               </div>
               <h3 className="text-xl font-semibold mb-4">Curated Marketplace</h3>
               <p className="text-muted-foreground">
@@ -54,7 +54,7 @@ export default function HomePage() {
 
             <div className="text-center">
               <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-secondary mb-6">
-                <Sparkles className="h-8 w-8" />
+                <SparklesIcon className="h-8 w-8" />
               </div>
               <h3 className="text-xl font-semibold mb-4">AI Visualization</h3>
               <p className="text-muted-foreground">
@@ -64,7 +64,7 @@ export default function HomePage() {
 
             <div className="text-center">
               <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-secondary mb-6">
-                <Users className="h-8 w-8" />
+                <UsersIcon className="h-8 w-8" />
               </div>
               <h3 className="text-xl font-semibold mb-4">Trusted Vendors</h3>
               <p className="text-muted-foreground">

@@ -9,36 +9,62 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        border: 'hsl(0 0% 90%)',
-        input: 'hsl(0 0% 90%)',
-        ring: 'hsl(0 0% 10%)',
-        background: 'hsl(0 0% 100%)',
-        foreground: 'hsl(0 0% 5%)',
+        // STRICT BLACK AND WHITE ONLY - NO COLORS, NO PURPLE
+        border: '#000000',
+        input: '#000000',
+        ring: '#000000',
+        background: '#FFFFFF',
+        foreground: '#000000',
         primary: {
-          DEFAULT: 'hsl(0 0% 0%)',
-          foreground: 'hsl(0 0% 100%)',
+          DEFAULT: '#000000',
+          foreground: '#FFFFFF',
         },
         secondary: {
-          DEFAULT: 'hsl(0 0% 96%)',
-          foreground: 'hsl(0 0% 10%)',
+          DEFAULT: '#F5F5F5',
+          foreground: '#000000',
         },
         muted: {
-          DEFAULT: 'hsl(0 0% 96%)',
-          foreground: 'hsl(0 0% 45%)',
+          DEFAULT: '#FAFAFA',
+          foreground: '#737373',
         },
         accent: {
-          DEFAULT: 'hsl(0 0% 96%)',
-          foreground: 'hsl(0 0% 10%)',
+          DEFAULT: '#000000',
+          foreground: '#FFFFFF',
         },
         destructive: {
-          DEFAULT: 'hsl(0 0% 0%)',
-          foreground: 'hsl(0 0% 100%)',
+          DEFAULT: '#000000',
+          foreground: '#FFFFFF',
+        },
+        success: {
+          DEFAULT: '#000000',
+          foreground: '#FFFFFF',
+        },
+        warning: {
+          DEFAULT: '#000000',
+          foreground: '#FFFFFF',
+        },
+        danger: {
+          DEFAULT: '#000000',
+          foreground: '#FFFFFF',
         },
       },
+      fontFamily: {
+        sans: ['system-ui', '-apple-system', 'sans-serif'],
+        mono: ['"Courier New"', 'monospace'],
+      },
       borderRadius: {
-        lg: '0.5rem',
-        md: '0.375rem',
-        sm: '0.25rem',
+        // BRUTALIST SHARP CORNERS - NO ROUNDED EDGES
+        lg: '0',
+        md: '0',
+        sm: '0',
+      },
+      letterSpacing: {
+        tighter: '-0.05em',
+        tight: '-0.025em',
+        normal: '0',
+        wide: '0.025em',
+        wider: '0.05em',
+        widest: '0.1em',
       },
     },
   },

@@ -1,7 +1,7 @@
 import { createClient } from '@/lib/supabase/server'
 import { StatsCard } from '@/components/admin/stats-card'
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card'
-import { Package, MessageSquare, Eye, TrendingUp } from 'lucide-react'
+import { CubeIcon, ChatBubbleLeftRightIcon, EyeIcon, ArrowTrendingUpIcon } from '@heroicons/react/24/outline'
 import { Badge } from '@/components/ui/badge'
 import { formatRelativeTime } from '@/lib/utils/format'
 
@@ -66,25 +66,25 @@ export default async function VendorDashboardPage() {
         <StatsCard
           title="Total Products"
           value={totalProducts || 0}
-          icon={Package}
+          icon={CubeIcon}
           href="/vendor/products"
         />
         <StatsCard
           title="Approved Products"
           value={approvedProducts || 0}
-          icon={TrendingUp}
+          icon={ArrowTrendingUpIcon}
           description={`${pendingProducts || 0} pending approval`}
         />
         <StatsCard
           title="Total Views"
           value={totalViews}
-          icon={Eye}
+          icon={EyeIcon}
           description="Last 30 days"
         />
         <StatsCard
           title="Inquiries"
           value={totalInquiries || 0}
-          icon={MessageSquare}
+          icon={ChatBubbleLeftRightIcon}
           href="/vendor/inquiries"
         />
       </div>

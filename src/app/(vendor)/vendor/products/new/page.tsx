@@ -11,7 +11,7 @@ import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card'
 import { productSchema, type ProductFormData } from '@/lib/validations/product'
 import { PRODUCT_CATEGORIES, STYLE_TAGS } from '@/lib/constants'
 import { toast } from 'sonner'
-import { ArrowLeft } from 'lucide-react'
+import { ArrowLeftIcon } from '@heroicons/react/24/outline'
 import Link from 'next/link'
 
 export default function NewProductPage() {
@@ -64,7 +64,7 @@ export default function NewProductPage() {
           href="/vendor/products"
           className="inline-flex items-center text-sm text-muted-foreground hover:text-foreground mb-4"
         >
-          <ArrowLeft className="mr-2 h-4 w-4" />
+          <ArrowLeftIcon className="mr-2 h-4 w-4" />
           Back to Products
         </Link>
         <h1 className="text-3xl font-bold">Add New Product</h1>

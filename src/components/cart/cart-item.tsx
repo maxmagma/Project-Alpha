@@ -1,7 +1,7 @@
 'use client'
 
 import Image from 'next/image'
-import { Minus, Plus, Trash2 } from 'lucide-react'
+import { MinusIcon, PlusIcon, TrashIcon } from '@heroicons/react/24/outline'
 import { Button } from '@/components/ui/button'
 import { formatPrice } from '@/lib/utils/format'
 import { Database } from '@/types/database.types'
@@ -51,7 +51,7 @@ export function CartItem({ item, onUpdateQuantity, onRemove }: CartItemProps) {
           onClick={() => onRemove(item.id)}
           className="h-8 w-8"
         >
-          <Trash2 className="h-4 w-4" />
+          <TrashIcon className="h-4 w-4" />
         </Button>
 
         <div className="flex items-center gap-2">
@@ -62,7 +62,7 @@ export function CartItem({ item, onUpdateQuantity, onRemove }: CartItemProps) {
             disabled={item.quantity <= 1}
             className="h-8 w-8"
           >
-            <Minus className="h-4 w-4" />
+            <MinusIcon className="h-4 w-4" />
           </Button>
           <span className="w-8 text-center">{item.quantity}</span>
           <Button
@@ -71,7 +71,7 @@ export function CartItem({ item, onUpdateQuantity, onRemove }: CartItemProps) {
             onClick={() => onUpdateQuantity(item.id, item.quantity + 1)}
             className="h-8 w-8"
           >
-            <Plus className="h-4 w-4" />
+            <PlusIcon className="h-4 w-4" />
           </Button>
         </div>
       </div>

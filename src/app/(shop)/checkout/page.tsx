@@ -6,7 +6,7 @@ import { useCart } from '@/components/providers/cart-provider'
 import { Button } from '@/components/ui/button'
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card'
 import { formatPrice } from '@/lib/utils/format'
-import { Loader2 } from 'lucide-react'
+import { ArrowPathIcon } from '@heroicons/react/24/outline'
 import { toast } from 'sonner'
 
 export default function CheckoutPage() {
@@ -97,7 +97,7 @@ export default function CheckoutPage() {
                 >
                   {isProcessing ? (
                     <>
-                      <Loader2 className="mr-2 h-4 w-4 animate-spin" />
+                      <ArrowPathIcon className="mr-2 h-4 w-4 animate-spin" />
                       Processing...
                     </>
                   ) : (

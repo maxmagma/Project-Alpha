@@ -3,7 +3,7 @@ import { createClient } from '@/lib/supabase/server'
 import { Button } from '@/components/ui/button'
 import { Card, CardContent } from '@/components/ui/card'
 import { Badge } from '@/components/ui/badge'
-import { Plus, Edit, Eye } from 'lucide-react'
+import { PlusIcon, PencilIcon, EyeIcon } from '@heroicons/react/24/outline'
 import { formatPrice, formatRelativeTime } from '@/lib/utils/format'
 import Image from 'next/image'
 
@@ -39,7 +39,7 @@ export default async function VendorProductsPage() {
         </div>
         <Link href="/vendor/products/new">
           <Button>
-            <Plus className="mr-2 h-4 w-4" />
+            <PlusIcon className="mr-2 h-4 w-4" />
             Add Product
           </Button>
         </Link>
@@ -80,7 +80,7 @@ export default async function VendorProductsPage() {
                 <p className="text-lg font-bold mb-3">{formatPrice(Number(product.base_price))}</p>
 
                 <div className="flex items-center gap-2 text-sm text-muted-foreground mb-4">
-                  <Eye className="h-4 w-4" />
+                  <EyeIcon className="h-4 w-4" />
                   <span>{product.views} views</span>
                   <span>•</span>
                   <span>{formatRelativeTime(product.created_at)}</span>
@@ -89,14 +89,14 @@ export default async function VendorProductsPage() {
                 <div className="flex gap-2">
                   <Link href={`/vendor/products/${product.id}/edit`} className="flex-1">
                     <Button variant="outline" size="sm" className="w-full">
-                      <Edit className="mr-2 h-4 w-4" />
+                      <PencilIcon className="mr-2 h-4 w-4" />
                       Edit
                     </Button>
                   </Link>
                   {product.status === 'approved' && (
                     <Link href={`/marketplace/${product.id}`}>
                       <Button variant="ghost" size="sm">
-                        <Eye className="h-4 w-4" />
+                        <EyeIcon className="h-4 w-4" />
                       </Button>
                     </Link>
                   )}
@@ -111,7 +111,7 @@ export default async function VendorProductsPage() {
             <p className="text-muted-foreground mb-4">No products yet</p>
             <Link href="/vendor/products/new">
               <Button>
-                <Plus className="mr-2 h-4 w-4" />
+                <PlusIcon className="mr-2 h-4 w-4" />
                 Add Your First Product
               </Button>
             </Link>

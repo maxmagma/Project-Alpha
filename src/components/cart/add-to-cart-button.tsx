@@ -1,7 +1,7 @@
 'use client'
 
 import { useState } from 'react'
-import { ShoppingCart } from 'lucide-react'
+import { ShoppingCartIcon } from '@heroicons/react/24/outline'
 import { Button } from '@/components/ui/button'
 import { useCart } from '@/components/providers/cart-provider'
 import { toast } from 'sonner'
@@ -36,7 +36,7 @@ export function AddToCartButton({ product }: AddToCartButtonProps) {
       className="w-full"
       size="lg"
     >
-      <ShoppingCart className="mr-2 h-5 w-5" />
+      <ShoppingCartIcon className="mr-2 h-5 w-5" />
       {isLoading ? 'Adding...' : 'Add to Cart'}
     </Button>
   )

@@ -5,7 +5,7 @@ import Image from 'next/image'
 import { Card, CardContent } from '@/components/ui/card'
 import { Button } from '@/components/ui/button'
 import { Badge } from '@/components/ui/badge'
-import { Check, X } from 'lucide-react'
+import { CheckIcon, XMarkIcon } from '@heroicons/react/24/outline'
 import { formatPrice } from '@/lib/utils/format'
 import { toast } from 'sonner'
 
@@ -112,7 +112,7 @@ export default function AdminProductsPage() {
                     size="sm"
                     className="flex-1"
                   >
-                    <Check className="mr-2 h-4 w-4" />
+                    <CheckIcon className="mr-2 h-4 w-4" />
                     Approve
                   </Button>
                   <Button
@@ -120,7 +120,7 @@ export default function AdminProductsPage() {
                     variant="outline"
                     size="sm"
                   >
-                    <X className="h-4 w-4" />
+                    <XMarkIcon className="h-4 w-4" />
                   </Button>
                 </div>
               </CardContent>

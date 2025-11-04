@@ -1,6 +1,6 @@
 import { createClient } from '@/lib/supabase/server'
 import { StatsCard } from '@/components/admin/stats-card'
-import { Package, Users, MessageSquare, ShoppingBag, TrendingUp, AlertCircle } from 'lucide-react'
+import { CubeIcon, UsersIcon, ChatBubbleLeftRightIcon, ShoppingBagIcon, ArrowTrendingUpIcon, ExclamationCircleIcon } from '@heroicons/react/24/outline'
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card'
 
 // Force dynamic rendering
@@ -39,26 +39,26 @@ export default async function AdminDashboardPage() {
         <StatsCard
           title="Pending Products"
           value={pendingProducts || 0}
-          icon={AlertCircle}
+          icon={ExclamationCircleIcon}
           href="/admin/products"
           description="Awaiting approval"
         />
         <StatsCard
           title="Active Products"
           value={activeProducts || 0}
-          icon={Package}
+          icon={CubeIcon}
         />
         <StatsCard
           title="Vendors"
           value={totalVendors || 0}
-          icon={Users}
+          icon={UsersIcon}
           href="/admin/vendors"
           description={`${pendingVendors || 0} pending`}
         />
         <StatsCard
           title="Inquiries"
           value={totalInquiries || 0}
-          icon={MessageSquare}
+          icon={ChatBubbleLeftRightIcon}
           href="/admin/inquiries"
         />
       </div>
@@ -67,12 +67,12 @@ export default async function AdminDashboardPage() {
         <StatsCard
           title="Total Orders"
           value={totalOrders || 0}
-          icon={ShoppingBag}
+          icon={ShoppingBagIcon}
         />
         <StatsCard
           title="Growth"
           value="+12.5%"
-          icon={TrendingUp}
+          icon={ArrowTrendingUpIcon}
           description="vs last month"
         />
       </div>
@@ -88,7 +88,7 @@ export default async function AdminDashboardPage() {
               href="/admin/products"
               className="p-4 border rounded-lg hover:bg-secondary transition-colors"
             >
-              <Package className="h-8 w-8 mb-2" />
+              <CubeIcon className="h-8 w-8 mb-2" />
               <h3 className="font-semibold">Review Products</h3>
               <p className="text-sm text-muted-foreground">
                 {pendingProducts || 0} pending approval
@@ -98,7 +98,7 @@ export default async function AdminDashboardPage() {
               href="/admin/vendors"
               className="p-4 border rounded-lg hover:bg-secondary transition-colors"
             >
-              <Users className="h-8 w-8 mb-2" />
+              <UsersIcon className="h-8 w-8 mb-2" />
               <h3 className="font-semibold">Manage Vendors</h3>
               <p className="text-sm text-muted-foreground">
                 {pendingVendors || 0} pending approval
@@ -108,7 +108,7 @@ export default async function AdminDashboardPage() {
               href="/admin/presets"
               className="p-4 border rounded-lg hover:bg-secondary transition-colors"
             >
-              <TrendingUp className="h-8 w-8 mb-2" />
+              <ArrowTrendingUpIcon className="h-8 w-8 mb-2" />
               <h3 className="font-semibold">Style Presets</h3>
               <p className="text-sm text-muted-foreground">
                 Manage AI visualizer presets

@@ -3,7 +3,7 @@ import { createClient } from '@/lib/supabase/server'
 import { SidebarNav } from '@/components/admin/sidebar-nav'
 import Link from 'next/link'
 import { Button } from '@/components/ui/button'
-import { ArrowLeft } from 'lucide-react'
+import { ArrowLeftIcon } from '@heroicons/react/24/outline'
 
 export default async function VendorLayout({
   children,
@@ -34,7 +34,7 @@ export default async function VendorLayout({
         <div className="container mx-auto px-4 py-4 flex items-center justify-between">
           <div>
             <Link href="/marketplace" className="flex items-center gap-2 text-sm text-muted-foreground hover:text-foreground mb-1">
-              <ArrowLeft className="h-4 w-4" />
+              <ArrowLeftIcon className="h-4 w-4" />
               Back to Marketplace
             </Link>
             <h1 className="text-2xl font-bold">Vendor Dashboard</h1>

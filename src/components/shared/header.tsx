@@ -1,7 +1,7 @@
 'use client'
 
 import Link from 'next/link'
-import { ShoppingCart, User, Menu } from 'lucide-react'
+import { ShoppingCartIcon, UserIcon, Bars3Icon } from '@heroicons/react/24/outline'
 import { Button } from '@/components/ui/button'
 import { useCart } from '@/components/providers/cart-provider'
 
@@ -37,7 +37,7 @@ export function Header() {
           <div className="flex items-center space-x-4">
             <Link href="/cart">
               <Button variant="ghost" size="icon" className="relative">
-                <ShoppingCart className="h-5 w-5" />
+                <ShoppingCartIcon className="h-5 w-5" />
                 {totalItems > 0 && (
                   <span className="absolute -top-1 -right-1 h-5 w-5 rounded-full bg-black text-white text-xs flex items-center justify-center">
                     {totalItems}
@@ -48,12 +48,12 @@ export function Header() {
 
             <Link href="/auth/login">
               <Button variant="ghost" size="icon">
-                <User className="h-5 w-5" />
+                <UserIcon className="h-5 w-5" />
               </Button>
             </Link>
 
             <Button variant="ghost" size="icon" className="md:hidden">
-              <Menu className="h-5 w-5" />
+              <Bars3Icon className="h-5 w-5" />
             </Button>
           </div>
         </div>

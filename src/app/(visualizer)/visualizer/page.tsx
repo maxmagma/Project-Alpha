@@ -5,7 +5,7 @@ import { Button } from '@/components/ui/button'
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card'
 import { Label } from '@/components/ui/label'
 import { Input } from '@/components/ui/input'
-import { Upload, Sparkles, Loader2 } from 'lucide-react'
+import { ArrowUpTrayIcon, SparklesIcon, ArrowPathIcon } from '@heroicons/react/24/outline'
 import { toast } from 'sonner'
 import Image from 'next/image'
 import { STYLE_TAGS } from '@/lib/constants'
@@ -86,7 +86,7 @@ export default function VisualizerPage() {
                   </div>
                 ) : (
                   <label className="flex flex-col items-center justify-center aspect-video border-2 border-dashed rounded-lg cursor-pointer hover:bg-secondary transition-colors">
-                    <Upload className="h-12 w-12 text-muted-foreground mb-2" />
+                    <ArrowUpTrayIcon className="h-12 w-12 text-muted-foreground mb-2" />
                     <span className="text-sm text-muted-foreground">Click to upload</span>
                     <input
                       type="file"
@@ -140,12 +140,12 @@ export default function VisualizerPage() {
             >
               {isGenerating ? (
                 <>
-                  <Loader2 className="mr-2 h-5 w-5 animate-spin" />
+                  <ArrowPathIcon className="mr-2 h-5 w-5 animate-spin" />
                   Generating...
                 </>
               ) : (
                 <>
-                  <Sparkles className="mr-2 h-5 w-5" />
+                  <SparklesIcon className="mr-2 h-5 w-5" />
                   Generate Visualization
                 </>
               )}

@@ -2,7 +2,7 @@
 
 import { useState } from 'react'
 import { useRouter } from 'next/navigation'
-import { Search } from 'lucide-react'
+import { MagnifyingGlassIcon } from '@heroicons/react/24/outline'
 import { Input } from '@/components/ui/input'
 import { Button } from '@/components/ui/button'
 
@@ -21,7 +21,7 @@ export function SearchBar() {
     <form onSubmit={handleSearch} className="max-w-2xl mx-auto">
       <div className="flex gap-2">
         <div className="relative flex-1">
-          <Search className="absolute left-3 top-1/2 -translate-y-1/2 h-5 w-5 text-muted-foreground" />
+          <MagnifyingGlassIcon className="absolute left-3 top-1/2 -translate-y-1/2 h-5 w-5 text-muted-foreground" />
           <Input
             type="text"
             placeholder="Search products..."

@@ -1,7 +1,7 @@
 'use client'
 
 import Link from 'next/link'
-import { ArrowRight, ShoppingBag } from 'lucide-react'
+import { ArrowRightIcon, ShoppingBagIcon } from '@heroicons/react/24/outline'
 import { Button } from '@/components/ui/button'
 import { Card, CardContent, CardFooter, CardHeader, CardTitle } from '@/components/ui/card'
 import { CartItem } from '@/components/cart/cart-item'
@@ -24,7 +24,7 @@ export default function CartPage() {
     return (
       <div className="container mx-auto px-4 py-12">
         <div className="max-w-md mx-auto text-center py-12">
-          <ShoppingBag className="h-16 w-16 mx-auto mb-4 text-muted-foreground" />
+          <ShoppingBagIcon className="h-16 w-16 mx-auto mb-4 text-muted-foreground" />
           <h2 className="text-2xl font-bold mb-2">Your cart is empty</h2>
           <p className="text-muted-foreground mb-6">
             Start browsing our marketplace to find products for your wedding
@@ -32,7 +32,7 @@ export default function CartPage() {
           <Link href="/marketplace">
             <Button>
               Browse Products
-              <ArrowRight className="ml-2 h-4 w-4" />
+              <ArrowRightIcon className="ml-2 h-4 w-4" />
             </Button>
           </Link>
         </div>
@@ -92,7 +92,7 @@ export default function CartPage() {
               <Link href="/checkout" className="w-full">
                 <Button className="w-full" size="lg">
                   Proceed to Checkout
-                  <ArrowRight className="ml-2 h-4 w-4" />
+                  <ArrowRightIcon className="ml-2 h-4 w-4" />
                 </Button>
               </Link>
               <Link href="/marketplace" className="w-full">

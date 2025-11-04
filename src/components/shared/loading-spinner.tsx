@@ -1,4 +1,4 @@
-import { Loader2 } from 'lucide-react'
+import { ArrowPathIcon } from '@heroicons/react/24/outline'
 import { cn } from '@/lib/utils/cn'
 
 interface LoadingSpinnerProps {
@@ -15,7 +15,7 @@ export function LoadingSpinner({ className, size = 'md' }: LoadingSpinnerProps) 
 
   return (
     <div className={cn('flex items-center justify-center', className)}>
-      <Loader2 className={cn('animate-spin text-muted-foreground', sizeClasses[size])} />
+      <ArrowPathIcon className={cn('animate-spin text-muted-foreground', sizeClasses[size])} />
     </div>
   )
 }
