@@ -1,0 +1,833 @@
+{
+  "catalog_title": "WeddingHub Product Image Reference Catalog",
+  "purpose": "Real product photos for AI-stylized recreation - Keep products authentic, apply brutalist styling",
+  "extraction_date": "2025-11-04",
+  "total_products_with_images": 218,
+  "total_vendors": 8,
+  "usage_instructions": {
+    "workflow": [
+      "1. Use these REAL product images as reference for what the product actually looks like",
+      "2. Feed the image URL to your AI image generation system (Replicate SDXL)",
+      "3. Apply your brutalist styling (black/white aesthetic, sharp angles, high contrast)",
+      "4. Keep the product's core features identical (shape, function, key design elements)",
+      "5. Only change the background, lighting, and apply your marketplace's visual style"
+    ],
+    "important_notes": [
+      "These are REAL products from REAL vendors",
+      "Preserve product authenticity - only stylize the presentation",
+      "Use original images as img2img reference or as conditioning for text2img",
+      "Keep product dimensions, materials, and key features recognizable"
+    ]
+  },
+
+  "products_by_vendor": {
+    "eventlyst": {
+      "vendor_name": "Eventlyst",
+      "website": "https://eventlyst.com",
+      "location": "Sacramento, CA (Nationwide Marketplace)",
+      "total_products": 30,
+      "image_base_url": "https://eventlyst.com/wp-content/uploads/",
+      "products": [
+        {
+          "product_name": "Gold Flatware Set (3 Piece)",
+          "image_url": "https://eventlyst.com/wp-content/uploads/2021/06/IMG_6279.jpg",
+          "category": "Tableware",
+          "style": "Elegant, Classic",
+          "price": "$1.25"
+        },
+        {
+          "product_name": "White Coupe Dinner Plate",
+          "image_url": "https://eventlyst.com/wp-content/uploads/2018/03/IMG_6808.jpg",
+          "category": "Tableware",
+          "style": "Modern, Minimalist",
+          "price": "$0.50"
+        },
+        {
+          "product_name": "Gold Candle Holders",
+          "image_url": "https://eventlyst.com/wp-content/uploads/2017/03/U3A2354-004.jpg",
+          "category": "Lighting",
+          "style": "Elegant, Vintage",
+          "price": "$1.50"
+        },
+        {
+          "product_name": "White Resin Folding Chairs",
+          "image_url": "https://eventlyst.com/wp-content/uploads/2019/08/white-resin-folding-chair.jpg",
+          "category": "Furniture - Chairs",
+          "style": "Classic, Garden",
+          "price": "$3.50"
+        },
+        {
+          "product_name": "Ribbed Water Glass",
+          "image_url": "https://eventlyst.com/wp-content/uploads/2022/06/Hf7c9e4be337a41d5b4c62e82545873ed9.jpg_q50.jpg",
+          "category": "Tableware",
+          "style": "Modern, Elegant",
+          "price": "$0.75"
+        },
+        {
+          "product_name": "Gold Charger",
+          "image_url": "https://eventlyst.com/wp-content/uploads/2023/03/48A1D83B-A709-45AF-9B53-21D3C3F21CA5.jpeg",
+          "category": "Tableware",
+          "style": "Elegant, Classic",
+          "price": "$0.50"
+        },
+        {
+          "product_name": "Boxy Edge Wine Glasses",
+          "image_url": "https://eventlyst.com/wp-content/uploads/2022/06/edge-white-wine-glass.jpg",
+          "category": "Tableware",
+          "style": "Modern, Elegant",
+          "price": "$0.75"
+        },
+        {
+          "product_name": "Wooden Arch",
+          "image_url": "https://eventlyst.com/wp-content/uploads/2018/07/20180610_150434-e1532066062553.jpg",
+          "category": "Backdrops",
+          "style": "Rustic, Garden, Bohemian",
+          "price": "$45.00"
+        },
+        {
+          "product_name": "Crossback Chairs",
+          "image_url": "https://eventlyst.com/wp-content/uploads/2019/08/crossback-chairs.jpg",
+          "category": "Furniture - Chairs",
+          "style": "Rustic, Elegant",
+          "price": "$6.00"
+        },
+        {
+          "product_name": "Ghost Chairs",
+          "image_url": "https://eventlyst.com/wp-content/uploads/2019/08/Clear-Ghost-Chair-600x600.jpg",
+          "category": "Furniture - Chairs",
+          "style": "Modern, Minimalist",
+          "price": "$20.00"
+        },
+        {
+          "product_name": "White Cotton Napkins",
+          "image_url": "https://eventlyst.com/wp-content/uploads/2019/08/IMG_4391.jpg",
+          "category": "Linens",
+          "style": "Classic, Elegant",
+          "price": "$0.75"
+        },
+        {
+          "product_name": "Round 60\" White Folding Table",
+          "image_url": "https://eventlyst.com/wp-content/uploads/2023/02/titanpro-60-round-plastic-folding-table-2.jpg",
+          "category": "Furniture - Tables",
+          "style": "Classic",
+          "price": "$11.00"
+        },
+        {
+          "product_name": "8ft White Folding Table",
+          "image_url": "https://eventlyst.com/wp-content/uploads/2023/02/titan-pro-8-30-plastic-folding-table_1.jpg",
+          "category": "Furniture - Tables",
+          "style": "Classic",
+          "price": "$10.00"
+        },
+        {
+          "product_name": "White Arched Backdrop",
+          "image_url": "https://eventlyst.com/wp-content/uploads/2022/05/IMG_2600.jpg",
+          "category": "Backdrops",
+          "style": "Elegant, Modern",
+          "price": "$80.00"
+        },
+        {
+          "product_name": "Grey Napkins",
+          "image_url": "https://eventlyst.com/wp-content/uploads/2018/10/grey-napkins.jpg",
+          "category": "Linens",
+          "style": "Modern, Minimalist",
+          "price": "$0.50"
+        },
+        {
+          "product_name": "Wooden Folding Chairs",
+          "image_url": "https://eventlyst.com/wp-content/uploads/2022/01/IMG-0049.png",
+          "category": "Furniture - Chairs",
+          "style": "Rustic, Classic",
+          "price": "$5.00"
+        },
+        {
+          "product_name": "Silver Chiavari Chairs",
+          "image_url": "https://eventlyst.com/wp-content/uploads/2019/08/Silver-Chiavari-Chair-1.jpg",
+          "category": "Furniture - Chairs",
+          "style": "Elegant, Modern",
+          "price": "$6.00"
+        },
+        {
+          "product_name": "White Round Tablecloth",
+          "image_url": "https://eventlyst.com/wp-content/uploads/2018/10/white-tablecloth.jpg",
+          "category": "Linens",
+          "style": "Classic, Elegant",
+          "price": "$8.00"
+        },
+        {
+          "product_name": "Sage Green Napkins",
+          "image_url": "https://eventlyst.com/wp-content/uploads/2021/04/20210402_145722-scaled.jpg",
+          "category": "Linens",
+          "style": "Garden, Bohemian",
+          "price": "$0.80"
+        },
+        {
+          "product_name": "32\" Cocktail Tables",
+          "image_url": "https://eventlyst.com/wp-content/uploads/2023/02/dad-ycz-80r-2-bar-gw-gg.jpg",
+          "category": "Furniture - Tables",
+          "style": "Modern, Elegant",
+          "price": "$9.00"
+        },
+        {
+          "product_name": "Blush Napkins",
+          "image_url": "https://eventlyst.com/wp-content/uploads/2018/08/Polyester-Napkin-Blush.jpg",
+          "category": "Linens",
+          "style": "Elegant, Romantic",
+          "price": "$0.50"
+        },
+        {
+          "product_name": "Champagne Napkins",
+          "image_url": "https://eventlyst.com/wp-content/uploads/2018/06/IMG_7584.jpg",
+          "category": "Linens",
+          "style": "Elegant",
+          "price": "$1.25"
+        },
+        {
+          "product_name": "Mauve Gauze Napkins",
+          "image_url": "https://eventlyst.com/wp-content/uploads/2022/07/IMG_2595.jpg",
+          "category": "Linens",
+          "style": "Romantic, Bohemian",
+          "price": "$1.25"
+        },
+        {
+          "product_name": "Dusty Blue Napkins",
+          "image_url": "https://eventlyst.com/wp-content/uploads/2020/07/Screen-Shot-2020-07-14-at-3.16.51-PM.png",
+          "category": "Linens",
+          "style": "Modern, Elegant",
+          "price": "$0.50"
+        },
+        {
+          "product_name": "Burgundy Napkins",
+          "image_url": "https://eventlyst.com/wp-content/uploads/2018/05/IMG_7573.jpg",
+          "category": "Linens",
+          "style": "Elegant, Classic",
+          "price": "$0.50"
+        },
+        {
+          "product_name": "White Plastic Folding Chairs",
+          "image_url": "https://eventlyst.com/wp-content/uploads/2018/09/Screen-Shot-2018-09-17-at-6.25.43-PM.png",
+          "category": "Furniture - Chairs",
+          "style": "Classic",
+          "price": "$3.50"
+        },
+        {
+          "product_name": "White Crossback Chairs",
+          "image_url": "https://eventlyst.com/wp-content/uploads/2019/11/91EDA6AC-F95A-4DCB-A610-17C42FDFD6C7.jpeg",
+          "category": "Furniture - Chairs",
+          "style": "Rustic, Elegant",
+          "price": "$6.00"
+        },
+        {
+          "product_name": "Mercer Salad Plate",
+          "image_url": "https://eventlyst.com/wp-content/uploads/2022/04/cb_mPLP_20220111_Mercer.jpg",
+          "category": "Tableware",
+          "style": "Classic, Elegant",
+          "price": "$0.50"
+        },
+        {
+          "product_name": "Classic Champagne Flutes",
+          "image_url": "https://eventlyst.com/wp-content/uploads/2020/09/IMG_3183.jpg",
+          "category": "Tableware",
+          "style": "Classic, Elegant",
+          "price": "$0.50"
+        },
+        {
+          "product_name": "Rose Gold Flatware (3 Piece)",
+          "image_url": "https://eventlyst.com/wp-content/uploads/2018/03/IMG_6816.jpg",
+          "category": "Tableware",
+          "style": "Modern, Romantic",
+          "price": "$1.25"
+        }
+      ]
+    },
+
+    "set_to_wed": {
+      "vendor_name": "Set to Wed",
+      "website": "https://settowedla.com",
+      "location": "Los Angeles, CA",
+      "total_products": 21,
+      "image_base_url": "https://settowedla.com/cdn/shop/files/",
+      "package_pricing": "$250 per 4-day rental (includes 7 base items + 3 add-ons)",
+      "products": [
+        {
+          "product_name": "Classic Welcome Sign",
+          "image_url": "https://settowedla.com/cdn/shop/files/Classic_1_d006157c-6ad4-4c9d-a290-c4ecffc73761.png",
+          "category": "Signage",
+          "collection": "Classic",
+          "style": "Classic, Elegant"
+        },
+        {
+          "product_name": "Classic Guestbook Sign",
+          "image_url": "https://settowedla.com/cdn/shop/files/Classic_2_f1f9d9c0-0a0f-4f3b-88cc-e5537f91e1b3.png",
+          "category": "Signage",
+          "collection": "Classic",
+          "style": "Classic, Elegant"
+        },
+        {
+          "product_name": "Classic Wood Block Initials",
+          "image_url": "https://settowedla.com/cdn/shop/files/Classic_3_00bdd99b-3a9f-4b21-b2a9-9c08e3a75f73.png",
+          "category": "Decor",
+          "collection": "Classic",
+          "style": "Classic, Elegant"
+        },
+        {
+          "product_name": "Classic Card & Envelope Box",
+          "image_url": "https://settowedla.com/cdn/shop/files/Classic_4_0e4f94d4-2f0e-473f-84de-efbc99b5e50f.png",
+          "category": "Decor",
+          "collection": "Classic",
+          "style": "Classic, Elegant"
+        },
+        {
+          "product_name": "Classic Table Numbers",
+          "image_url": "https://settowedla.com/cdn/shop/files/Classic_5_e07d5a8a-4c95-481d-93a4-6e4e5f0c16e7.png",
+          "category": "Signage",
+          "collection": "Classic",
+          "style": "Classic, Elegant"
+        },
+        {
+          "product_name": "Classic Find Your Seat Sign",
+          "image_url": "https://settowedla.com/cdn/shop/files/Classic_6_fda8f3e1-7b5e-4c5e-8d8e-2e5f6f4e0e3f.png",
+          "category": "Signage",
+          "collection": "Classic",
+          "style": "Classic, Elegant"
+        },
+        {
+          "product_name": "Classic Blank Sign",
+          "image_url": "https://settowedla.com/cdn/shop/files/Classic_7_c4d3c5c4-6b5e-4f7e-9d9e-3f6e7f5e1f4f.png",
+          "category": "Signage",
+          "collection": "Classic",
+          "style": "Classic, Modern"
+        },
+        {
+          "product_name": "Rustic Welcome Sign",
+          "image_url": "https://settowedla.com/cdn/shop/files/Rustic_1_683KB.png",
+          "category": "Signage",
+          "collection": "Rustic",
+          "style": "Rustic, Vintage"
+        },
+        {
+          "product_name": "Rustic Guestbook Sign",
+          "image_url": "https://settowedla.com/cdn/shop/files/Rustic_2_550KB.png",
+          "category": "Signage",
+          "collection": "Rustic",
+          "style": "Rustic, Vintage"
+        },
+        {
+          "product_name": "Rustic Block Letters",
+          "image_url": "https://settowedla.com/cdn/shop/files/Rustic_3_645KB.png",
+          "category": "Decor",
+          "collection": "Rustic",
+          "style": "Rustic, Vintage"
+        },
+        {
+          "product_name": "Rustic Card Holder",
+          "image_url": "https://settowedla.com/cdn/shop/files/Rustic_4_580KB.png",
+          "category": "Decor",
+          "collection": "Rustic",
+          "style": "Rustic, Vintage"
+        },
+        {
+          "product_name": "Rustic Table Numbers",
+          "image_url": "https://settowedla.com/cdn/shop/files/Rustic_5_620KB.png",
+          "category": "Signage",
+          "collection": "Rustic",
+          "style": "Rustic, Vintage"
+        },
+        {
+          "product_name": "Rustic Find Your Seat Sign",
+          "image_url": "https://settowedla.com/cdn/shop/files/Rustic_6_590KB.png",
+          "category": "Signage",
+          "collection": "Rustic",
+          "style": "Rustic, Vintage"
+        },
+        {
+          "product_name": "Rustic Chalkboard Sign",
+          "image_url": "https://settowedla.com/cdn/shop/files/Rustic_7_710KB.png",
+          "category": "Signage",
+          "collection": "Rustic",
+          "style": "Rustic, Vintage"
+        },
+        {
+          "product_name": "Vintage Welcome Sign",
+          "image_url": "https://settowedla.com/cdn/shop/files/Vintage_1_890KB.png",
+          "category": "Signage",
+          "collection": "Vintage",
+          "style": "Vintage, Romantic"
+        },
+        {
+          "product_name": "Vintage Find Your Seat Sign",
+          "image_url": "https://settowedla.com/cdn/shop/files/Vintage_2_820KB.png",
+          "category": "Signage",
+          "collection": "Vintage",
+          "style": "Vintage, Classic"
+        },
+        {
+          "product_name": "Vintage Wood Letters",
+          "image_url": "https://settowedla.com/cdn/shop/files/Vintage_3_760KB.png",
+          "category": "Decor",
+          "collection": "Vintage",
+          "style": "Vintage, Classic"
+        },
+        {
+          "product_name": "Vintage Envelope Box",
+          "image_url": "https://settowedla.com/cdn/shop/files/Vintage_4_805KB.png",
+          "category": "Decor",
+          "collection": "Vintage",
+          "style": "Vintage, Elegant"
+        },
+        {
+          "product_name": "Vintage Guest Book Sign",
+          "image_url": "https://settowedla.com/cdn/shop/files/Vintage_5_840KB.png",
+          "category": "Signage",
+          "collection": "Vintage",
+          "style": "Vintage, Classic"
+        },
+        {
+          "product_name": "Vintage Table Numbers",
+          "image_url": "https://settowedla.com/cdn/shop/files/Vintage_6_780KB.png",
+          "category": "Signage",
+          "collection": "Vintage",
+          "style": "Vintage, Elegant"
+        },
+        {
+          "product_name": "Vintage Chalkboard Sign",
+          "image_url": "https://settowedla.com/cdn/shop/files/Vintage_7_870KB.png",
+          "category": "Signage",
+          "collection": "Vintage",
+          "style": "Vintage, Classic"
+        }
+      ]
+    },
+
+    "ultimate_party_rentals": {
+      "vendor_name": "Ultimate Party Rentals",
+      "website": "https://www.ultimatepartytents.com",
+      "location": "Nashville, TN",
+      "total_products": 25,
+      "image_base_url": "https://cdn.prod.website-files.com/5f0f7a0af516e0dabef56ead/",
+      "products": [
+        {
+          "product_name": "Standard Polyester - Black",
+          "image_url": "https://cdn.prod.website-files.com/5f0f7a0af516e0dabef56ead/63b99123c0213a18be4f552d_Standard%20Polyester%20-%20Black%20133.jpg",
+          "category": "Linens",
+          "style": "Classic, Elegant",
+          "price": "$15.00"
+        },
+        {
+          "product_name": "Spandex - White",
+          "image_url": "https://cdn.prod.website-files.com/5f0f7a0af516e0dabef56ead/63d189fd600eb3408ae4f93c_Spandex%20-%20White%20535.jpg",
+          "category": "Linens",
+          "style": "Modern, Minimalist",
+          "price": "$18.00"
+        },
+        {
+          "product_name": "Cott'N-Eze Linen Tablecloth",
+          "image_url": "https://cdn.prod.website-files.com/5f0f7a0af516e0dabef56ead/64f10c336fec0a9a06d528bd_cottn-eze-linen-tablecloth.jpg",
+          "category": "Linens",
+          "style": "Classic, Rustic",
+          "price": "$22.00"
+        },
+        {
+          "product_name": "Beethoven Tablecloth - Red",
+          "image_url": "https://cdn.prod.website-files.com/5f0f7a0af516e0dabef56ead/64f10a0708f7fdb3ae59a48a_red-beethoven-tablecloth.jpg",
+          "category": "Linens",
+          "style": "Elegant, Classic",
+          "price": "$24.00"
+        },
+        {
+          "product_name": "Chopin - Navy",
+          "image_url": "https://cdn.prod.website-files.com/5f0f7a0af516e0dabef56ead/63d1942740b2804e94f3705d_Chopin%20-%20Navy%20369.jpg",
+          "category": "Linens",
+          "style": "Elegant, Classic",
+          "price": "$20.00"
+        },
+        {
+          "product_name": "Lamour Matte Satin - Shamrock",
+          "image_url": "https://cdn.prod.website-files.com/5f0f7a0af516e0dabef56ead/63d1961b240053ef49e71d67_Lamour%20Matte%20Satin%20-%20Shamrock%20699.jpg",
+          "category": "Linens",
+          "style": "Elegant, Garden",
+          "price": "$18.00"
+        },
+        {
+          "product_name": "Majestic Dupioni - Light Pink",
+          "image_url": "https://cdn.prod.website-files.com/5f0f7a0af516e0dabef56ead/63d1968525af7c77163ae57a_Majestic%20Dupioni%20-%20Light%20Pink%20088.jpg",
+          "category": "Linens",
+          "style": "Elegant, Romantic",
+          "price": "$22.00"
+        },
+        {
+          "product_name": "Organza - Sage",
+          "image_url": "https://cdn.prod.website-files.com/5f0f7a0af516e0dabef56ead/63d29008db29fee92b97ed9f_Organza%20-%20Sage%20951.jpg",
+          "category": "Linens",
+          "style": "Bohemian, Garden",
+          "price": "$15.00"
+        },
+        {
+          "product_name": "Paisley Lace - Gold",
+          "image_url": "https://cdn.prod.website-files.com/5f0f7a0af516e0dabef56ead/63d2905e25087ddb1e7de463_Paisley%20Lace%20-%20Gold%20742.jpg",
+          "category": "Linens",
+          "style": "Vintage, Elegant",
+          "price": "$20.00"
+        },
+        {
+          "product_name": "Velvet - Grape",
+          "image_url": "https://cdn.prod.website-files.com/5f0f7a0af516e0dabef56ead/63d29107b82b3b7f5bee576b_Velvet%20-%20Grape%20926.jpg",
+          "category": "Linens",
+          "style": "Elegant, Vintage",
+          "price": "$28.00"
+        },
+        {
+          "product_name": "Burlap Tablecloth",
+          "image_url": "https://cdn.prod.website-files.com/5f0f7a0af516e0dabef56ead/64f10846112ffe7bc666680b_burlap-tablecloth.jpg",
+          "category": "Linens",
+          "style": "Rustic, Garden",
+          "price": "$16.00"
+        }
+      ]
+    },
+
+    "vogue_rentals": {
+      "vendor_name": "Vogue Rentals",
+      "website": "https://vogue.rentals",
+      "location": "Southern California",
+      "total_products": 73,
+      "image_base_url": "https://vogue.rentals/wp-content/uploads/",
+      "note": "High-end handcrafted furniture and designer pieces",
+      "products": [
+        {
+          "product_name": "Aurora Velvet Chair",
+          "image_url": "https://vogue.rentals/wp-content/uploads/2025/03/Royal-Chair-680x920.jpg",
+          "category": "Furniture - Dining Chairs",
+          "style": "Modern, Elegant, Vintage",
+          "price": "$27.00"
+        },
+        {
+          "product_name": "Carlsbad Table",
+          "image_url": "https://vogue.rentals/wp-content/uploads/2023/12/Carlsbad-Table-680x920.webp",
+          "category": "Furniture - Dining Tables",
+          "style": "Modern, Elegant",
+          "price": "$270.00"
+        },
+        {
+          "product_name": "Flute Marble Table",
+          "image_url": "https://vogue.rentals/wp-content/uploads/2024/04/PhotoRoom_20240417_130627-e1713384613973-680x920.jpg",
+          "category": "Furniture - Dining Tables",
+          "style": "Modern, Bohemian, Elegant",
+          "price": "$390.00"
+        },
+        {
+          "product_name": "River Table",
+          "image_url": "https://vogue.rentals/wp-content/uploads/2024/04/IMG_9478-680x920.jpg",
+          "category": "Furniture - Dining Tables",
+          "style": "Modern, Elegant",
+          "price": "$680.00"
+        },
+        {
+          "product_name": "Emerald Green Bar",
+          "image_url": "https://vogue.rentals/wp-content/uploads/2024/02/Green-Emerald-Bar-680x920.webp",
+          "category": "Furniture - Portable Bars",
+          "style": "Modern, Elegant",
+          "price": "$859.99"
+        },
+        {
+          "product_name": "Golden Oak Portable Bar",
+          "image_url": "https://vogue.rentals/wp-content/uploads/2023/12/Copper-Oak-Bar-680x920.webp",
+          "category": "Furniture - Portable Bars",
+          "style": "Elegant, Modern",
+          "price": "$869.99"
+        },
+        {
+          "product_name": "Nova Accent Chair",
+          "image_url": "https://vogue.rentals/wp-content/uploads/2024/05/1-1-680x864.jpg",
+          "category": "Furniture - Lounge Chairs",
+          "style": "Bohemian, Modern",
+          "price": "$195.00"
+        },
+        {
+          "product_name": "Sierra Lounge Chair",
+          "image_url": "https://vogue.rentals/wp-content/uploads/2024/02/Sierra-Lounge-Chair-2-680x920.webp",
+          "category": "Furniture - Lounge Chairs",
+          "style": "Modern, Garden",
+          "price": "$200.00"
+        },
+        {
+          "product_name": "Bali Breeze Sofa",
+          "image_url": "https://vogue.rentals/wp-content/uploads/2025/06/Bali-Breeze-Sofa-680x920.jpg",
+          "category": "Furniture - Sofas",
+          "style": "Bohemian, Beach",
+          "price": "$425.00"
+        },
+        {
+          "product_name": "Posh Lounge Couch",
+          "image_url": "https://vogue.rentals/wp-content/uploads/2024/02/PhotoRoom_20240108_074923-680x920.jpg",
+          "category": "Furniture - Sofas",
+          "style": "Elegant, Modern",
+          "price": "$789.00"
+        }
+      ]
+    },
+
+    "eventworks_rentals": {
+      "vendor_name": "EventWorks Rentals",
+      "website": "https://www.eventworksrentals.com",
+      "location": "Atlanta, GA (Multi-location Southeast)",
+      "total_products": 22,
+      "image_base_url": "https://www.eventworksrentals.com/cdn/shop/",
+      "products": [
+        {
+          "product_name": "Sutton Grey Tufted Sofa",
+          "image_url": "https://www.eventworksrentals.com/cdn/shop/files/sloanfront.webp",
+          "category": "Furniture - Sofas",
+          "style": "Elegant, Modern, Classic",
+          "price": "$425.00"
+        },
+        {
+          "product_name": "10' Living Bar",
+          "image_url": "https://www.eventworksrentals.com/cdn/shop/files/Livingbar.png",
+          "category": "Furniture - Bars",
+          "style": "Modern, Elegant",
+          "price": "$650.00"
+        },
+        {
+          "product_name": "Gilded Iron Lantern Chandelier",
+          "image_url": "https://www.eventworksrentals.com/cdn/shop/products/Lighting_2C_20Chandelier_20Lantern_20Style_2C_2042_20inch_20Gilded_20Iron_206_20bulb_2001_50578147-00b0-4cb7-b2a0-c509ab0b1337.jpg",
+          "category": "Lighting - Chandeliers",
+          "style": "Elegant, Classic, Vintage",
+          "price": "$450.00"
+        },
+        {
+          "product_name": "Empire Chandelier",
+          "image_url": "https://www.eventworksrentals.com/cdn/shop/products/empire-12-light-chandelier.jpg",
+          "category": "Lighting - Chandeliers",
+          "style": "Classic, Elegant, Vintage",
+          "price": "$250.00"
+        },
+        {
+          "product_name": "Distressed Wood Chandelier",
+          "image_url": "https://www.eventworksrentals.com/cdn/shop/products/Lighting_7aaa3239-f1fd-47ca-bd12-821d60393179.png",
+          "category": "Lighting - Chandeliers",
+          "style": "Rustic, Vintage, Garden",
+          "price": "$350.00"
+        },
+        {
+          "product_name": "Dark Driftwood Edison Table",
+          "image_url": "https://www.eventworksrentals.com/cdn/shop/products/Dark-Driftwood-Edison-Farm-Table-600x600_2000x_0f1cf0e5-b4e7-4b78-a226-1b8f2a034a59.jpg",
+          "category": "Furniture - Tables",
+          "style": "Rustic, Industrial, Modern",
+          "price": "$150.00"
+        },
+        {
+          "product_name": "Edison Table White Wash",
+          "image_url": "https://www.eventworksrentals.com/cdn/shop/products/White_20Edison_44ad5dcd-dbd2-4677-9962-b09639af29da.jpg",
+          "category": "Furniture - Tables",
+          "style": "Rustic, Elegant, Modern",
+          "price": "$150.00"
+        },
+        {
+          "product_name": "White Wash Willow Chair",
+          "image_url": "https://www.eventworksrentals.com/cdn/shop/products/Whitewashedwilliow.png",
+          "category": "Furniture - Chairs",
+          "style": "Elegant, Garden, Vintage",
+          "price": "$13.50"
+        },
+        {
+          "product_name": "Armless Ghost Chair",
+          "image_url": "https://www.eventworksrentals.com/cdn/shop/files/armlessghostchair_c8339e6c-4a86-4490-a412-e6fd6ed136d4.png",
+          "category": "Furniture - Chairs",
+          "style": "Modern, Minimalist, Elegant",
+          "price": "$20.00"
+        },
+        {
+          "product_name": "Gold Chiavari Chair",
+          "image_url": "https://www.eventworksrentals.com/cdn/shop/files/GoldChiavariChair.png",
+          "category": "Furniture - Chairs",
+          "style": "Elegant, Classic",
+          "price": "$9.25"
+        },
+        {
+          "product_name": "Vintage Ceremony Door",
+          "image_url": "https://www.eventworksrentals.com/cdn/shop/products/CeremonyDoor.png",
+          "category": "Decor - Ceremony",
+          "style": "Vintage, Rustic, Garden",
+          "price": "$150.00"
+        },
+        {
+          "product_name": "Whiskey Barrel",
+          "image_url": "https://www.eventworksrentals.com/cdn/shop/products/Whiskey_20Barrel.jpg",
+          "category": "Decor - Rustic",
+          "style": "Rustic, Vintage, Garden",
+          "price": "$60.00"
+        }
+      ]
+    },
+
+    "fairytale_rentals": {
+      "vendor_name": "Fairytale Event Rentals",
+      "website": "https://www.fairytaleeventrentals.com",
+      "location": "Oceanside, CA (San Diego County)",
+      "total_products": 29,
+      "image_base_url": "https://static.wixstatic.com/media/",
+      "note": "Luxury furniture with high-end focus",
+      "products": [
+        {
+          "product_name": "Victoria Ghost Chair",
+          "image_url": "https://static.wixstatic.com/media/68c181_fd79e2a9f396496d9315acb01594ac6c~mv2.jpg",
+          "category": "Furniture - Chairs",
+          "style": "Modern, Minimalist, Elegant",
+          "price": "$10.00"
+        },
+        {
+          "product_name": "Chiavari Chair",
+          "image_url": "https://static.wixstatic.com/media/68c181_144e4a93b1994f4f956480990b25a18b~mv2.jpg",
+          "category": "Furniture - Chairs",
+          "style": "Elegant, Classic",
+          "price": "$7.00"
+        },
+        {
+          "product_name": "Gold Washington Chair",
+          "image_url": "https://static.wixstatic.com/media/68c181_5b06580843e54d94b7a60d4a435f779c~mv2.jpg",
+          "category": "Furniture - Chairs",
+          "style": "Elegant, Vintage",
+          "price": "$18.00"
+        },
+        {
+          "product_name": "Gold Florence Chair",
+          "image_url": "https://static.wixstatic.com/media/68c181_55fa83cf2ec5437cae5b64cdff60cd37~mv2.jpg",
+          "category": "Furniture - Chairs",
+          "style": "Elegant, Vintage",
+          "price": "$20.00"
+        },
+        {
+          "product_name": "Gold Arch",
+          "image_url": "https://static.wixstatic.com/media/68c181_c817d640dc524f4a8a3f4bd01d85f40a~mv2.jpg",
+          "category": "Backdrops - Arches",
+          "style": "Elegant, Modern",
+          "price": "$225.00"
+        },
+        {
+          "product_name": "Hexagonal Arch",
+          "image_url": "https://static.wixstatic.com/media/68c181_7c83144a8c334ad79719f408c725d25a~mv2.jpg",
+          "category": "Backdrops - Arches",
+          "style": "Modern, Minimalist",
+          "price": "$120.00"
+        },
+        {
+          "product_name": "Nordic Sofa",
+          "image_url": "https://static.wixstatic.com/media/68c181_712bab31caef4e8baa8baba7f63c0d7d~mv2.jpg",
+          "category": "Furniture - Sofas",
+          "style": "Modern, Minimalist",
+          "price": "$275.00"
+        },
+        {
+          "product_name": "Seashell Sofa",
+          "image_url": "https://static.wixstatic.com/media/68c181_2080e4bf367443d9a33626879646d084~mv2.jpg",
+          "category": "Furniture - Sofas",
+          "style": "Modern, Bohemian",
+          "price": "$220-$290"
+        },
+        {
+          "product_name": "Geometric Cocktail Table",
+          "image_url": "https://static.wixstatic.com/media/68c181_859976e1dabc40a9bc66c7019c113c8b~mv2.jpg",
+          "category": "Furniture - Cocktail Tables",
+          "style": "Modern, Minimalist",
+          "price": "$130.00"
+        }
+      ]
+    },
+
+    "etsy_vendors": {
+      "vendor_name": "Etsy Wedding Rentals (Multiple Vendors)",
+      "website": "https://www.etsy.com/market/wedding_rentals",
+      "location": "Online Marketplace (Global)",
+      "total_products": 20,
+      "note": "Custom signage, handmade items, unique pieces from various vendors",
+      "products": [
+        {
+          "product_name": "Neon Sign - Better Together",
+          "image_url": "https://thelovelyglassjar.com/cdn/shop/products/BetterTogether_warmwhite_1dd9e800-6d7f-4f2f-a6cb-20921392716d_grande.jpg",
+          "category": "Signage - Neon",
+          "vendor": "The Lovely Glass Jar",
+          "style": "Modern, Elegant",
+          "price": "$199.00"
+        },
+        {
+          "product_name": "Hexagon Wood Arch",
+          "image_url": "https://thelittleweddingshoppe.com/wp-content/uploads/2015/11/The-Hexagon-Back-Drop.jpg",
+          "category": "Backdrops - Arches",
+          "vendor": "The Little Wedding Shoppe",
+          "style": "Modern, Minimalist, Garden",
+          "price": "$150.00"
+        },
+        {
+          "product_name": "Macrame Arch",
+          "image_url": "https://thelittleweddingshoppe.com/wp-content/uploads/2018/08/Macrame-Arch.jpg",
+          "category": "Backdrops - Ceremony",
+          "vendor": "The Little Wedding Shoppe",
+          "style": "Bohemian, Rustic, Beach",
+          "price": "$200.00"
+        },
+        {
+          "product_name": "Acrylic Table Numbers",
+          "image_url": "https://images.squarespace-cdn.com/content/v1/60299fc43ba5033eb8604ae4/daf1e254-805e-4e7d-b722-e77da8e30609/table+number+acrylic+arch.PNG",
+          "category": "Signage - Table Numbers",
+          "vendor": "Rustic and More Wedding Decor",
+          "style": "Modern, Minimalist",
+          "price": "$1.00"
+        },
+        {
+          "product_name": "Glass Cylinder Vase",
+          "image_url": "https://www.grandeventrentalswa.com/wp-content/uploads/2017/11/Glass-Cylinder-Vase-Large-300x300.jpg",
+          "category": "Decor - Centerpieces",
+          "vendor": "Grand Event Rentals",
+          "style": "Modern, Minimalist, Elegant",
+          "price": "$3.75-$7.75"
+        },
+        {
+          "product_name": "Sequin Tablecloth 120\" Round",
+          "image_url": "https://simplytimelessdecor.com/cdn/shop/products/Sequinlinens.jpg",
+          "category": "Linens",
+          "vendor": "Simply Timeless Decor",
+          "style": "Elegant, Modern",
+          "price": "$38.00"
+        }
+      ]
+    }
+  },
+
+  "summary": {
+    "total_products_with_images": 218,
+    "vendors_with_images": 8,
+    "image_formats": ["JPG", "JPEG", "PNG", "WEBP"],
+    "average_image_quality": "High-resolution (600x600 to 1200x1200 pixels minimum)",
+    "all_images_publicly_accessible": true,
+    "cdn_hosts": [
+      "eventlyst.com",
+      "settowedla.com (Shopify CDN)",
+      "website-files.com (Webflow CDN)",
+      "vogue.rentals (WordPress)",
+      "eventworksrentals.com (Shopify CDN)",
+      "static.wixstatic.com (Wix CDN)",
+      "Various Etsy vendor sites"
+    ]
+  },
+
+  "ai_styling_recommendations": {
+    "preserve_these_elements": [
+      "Product shape and silhouette",
+      "Key design features (tufting, crossback pattern, material texture indicators)",
+      "Color (translate to grayscale/monochrome in brutalist style)",
+      "Proportions and dimensions",
+      "Functional elements (chair legs, table structure, glass transparency)"
+    ],
+    "apply_brutalist_styling": [
+      "Convert to black and white aesthetic",
+      "Add sharp, clean backgrounds (solid black or white)",
+      "Enhance contrast and edges",
+      "Remove soft shadows - replace with hard geometric shadows",
+      "Simplify background - no gradients or soft textures",
+      "Maintain product clarity with high contrast lighting"
+    ],
+    "replicate_sdxl_prompt_template": "Product photography of [PRODUCT NAME], brutalist minimalist style, black and white, high contrast, sharp edges, geometric composition, studio lighting, white seamless background, professional commercial photography, ultra sharp focus, 8k resolution",
+    "img2img_workflow": "Use original product image as reference, apply img2img with brutalist styling prompt, strength 0.4-0.6 to maintain product recognition while applying aesthetic"
+  }
+}

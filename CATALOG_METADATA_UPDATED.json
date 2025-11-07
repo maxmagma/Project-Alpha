@@ -1,0 +1,164 @@
+{
+  "catalog_metadata": {
+    "title": "WeddingHub Real Product Catalog",
+    "extraction_date": "2025-11-05",
+    "total_products": 408,
+    "total_vendors": 12,
+    "status": "Expanded - Launch Ready",
+    "notes": "Catalog expanded with 190 additional real products from 4 new verified vendors. All products have verified details and image URLs."
+  },
+  "vendor_summary": [
+    {
+      "vendor": "Eventlyst",
+      "location": "Sacramento, CA (Nationwide Marketplace)",
+      "website": "https://eventlyst.com",
+      "products_extracted": 50,
+      "specialties": [
+        "Comprehensive marketplace",
+        "All categories",
+        "Multiple local vendors"
+      ],
+      "price_range": "$0.30 - $135.00"
+    },
+    {
+      "vendor": "Set to Wed",
+      "location": "Los Angeles, CA",
+      "website": "https://settowedla.com",
+      "products_extracted": 52,
+      "specialties": [
+        "All-inclusive decor packages",
+        "Signage",
+        "Ceremony decor"
+      ],
+      "price_range": "$250 per complete set"
+    },
+    {
+      "vendor": "Ultimate Party Rentals",
+      "location": "Nashville, TN",
+      "website": "https://ultimatepartytents.com",
+      "products_extracted": 31,
+      "specialties": [
+        "Furniture",
+        "Linens",
+        "Tableware",
+        "Tents",
+        "Lighting"
+      ],
+      "price_range": "$1.00 - $650.00"
+    },
+    {
+      "vendor": "Vogue Rentals",
+      "location": "Southern California",
+      "website": "https://vogue.rentals",
+      "products_extracted": 20,
+      "specialties": [
+        "High-end furniture",
+        "Handcrafted items",
+        "Designer pieces"
+      ],
+      "price_range": "$1.45 - $869.99"
+    },
+    {
+      "vendor": "EventWorks Rentals",
+      "location": "Atlanta, GA (Multi-location Southeast)",
+      "website": "https://eventworksrentals.com",
+      "products_extracted": 20,
+      "specialties": [
+        "Comprehensive inventory",
+        "Showroom access",
+        "Full service"
+      ],
+      "price_range": "$11.50 - $650.00"
+    },
+    {
+      "vendor": "Fairytale Rentals",
+      "location": "Oceanside, CA",
+      "website": "https://fairytaleeventrentals.com",
+      "products_extracted": 24,
+      "specialties": [
+        "Luxury furniture",
+        "High-end lounge seating",
+        "Premium decor"
+      ],
+      "price_range": "$10.00 - $200.00"
+    },
+    {
+      "vendor": "Etsy Wedding Rentals",
+      "location": "Online Marketplace (Global)",
+      "website": "https://etsy.com/market/wedding_rentals",
+      "products_extracted": 20,
+      "specialties": [
+        "Custom signage",
+        "Handmade items",
+        "Unique pieces"
+      ],
+      "price_range": "$14.00 - $195.00 (rental rates)"
+    },
+    {
+      "vendor": "Wedlender",
+      "location": "Online Marketplace (Nationwide)",
+      "website": "https://wedlender.com",
+      "products_extracted": 1,
+      "specialties": [
+        "Peer-to-peer rentals",
+        "Sustainable focus"
+      ],
+      "price_range": "$0.01 - $0.02",
+      "note": "Limited current inventory - new marketplace platform"
+    },
+    {
+      "vendor": "Rent Pearl",
+      "location": "CT, NY, MA, RI",
+      "website": "https://rentpearl.com",
+      "products_extracted": 20,
+      "specialties": [
+        "Lounge furniture",
+        "Designer sofas",
+        "Accent chairs",
+        "Vintage pieces"
+      ],
+      "price_range": "$30.00 - $500.00"
+    },
+    {
+      "vendor": "Kadeema Rentals",
+      "location": "Norwood, MA (Greater New England)",
+      "website": "https://kadeemarentals.com",
+      "products_extracted": 50,
+      "specialties": [
+        "Modern furniture",
+        "Contemporary design",
+        "Minimalist pieces",
+        "Luxury lounge"
+      ],
+      "price_range": "$25.00 - $2,225.00"
+    },
+    {
+      "vendor": "CORT Party Rental",
+      "location": "Seattle, WA (Pacific Northwest)",
+      "website": "https://cortpartyrental.com",
+      "products_extracted": 60,
+      "specialties": [
+        "Comprehensive rentals",
+        "Chiavari chairs",
+        "Linens",
+        "Tableware",
+        "Lighting"
+      ],
+      "price_range": "$0.87 - $1,008.90"
+    },
+    {
+      "vendor": "Marquee Event Rentals / Quest Events",
+      "location": "Multi-region (Texas, Midwest, South)",
+      "website": "https://questevents.com",
+      "products_extracted": 60,
+      "specialties": [
+        "Full-service rentals",
+        "Tents",
+        "Furniture",
+        "Farm tables",
+        "Lounge seating"
+      ],
+      "price_range": "$13.50 - $425.00"
+    }
+  ]
+}
