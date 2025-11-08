@@ -48,6 +48,27 @@ async function getProducts(filters: SearchParamsType) {
     query = query.ilike('name', `%${filters.search}%`)
   }
 
+  // Price range filter
+  if (filters.price) {
+    switch (filters.price) {
+      case 'under-100':
+        query = query.lt('base_price', 100)
+        break
+      case '100-500':
+        query = query.gte('base_price', 100).lte('base_price', 500)
+        break
+      case '500-1000':
+        query = query.gte('base_price', 500).lte('base_price', 1000)
+        break
+      case '1000-2500':
+        query = query.gte('base_price', 1000).lte('base_price', 2500)
+        break
+      case 'over-2500':
+        query = query.gt('base_price', 2500)
+        break
+    }
+  }
+
   // Pagination
   const page = parseInt(filters.page || '1')
   const from = (page - 1) * ITEMS_PER_PAGE

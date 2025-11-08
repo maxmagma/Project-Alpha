@@ -22,6 +22,21 @@ export async function POST(request: Request) {
 
       const supabase = await createClient()
 
+      // Check for idempotency - prevent duplicate order creation
+      const paymentIntentId = session.payment_intent as string
+      if (paymentIntentId) {
+        const { data: existingOrder } = await supabase
+          .from('orders')
+          .select('id, order_number')
+          .eq('stripe_payment_intent_id', paymentIntentId)
+          .single()
+
+        if (existingOrder) {
+          console.log(`Order already exists for payment intent: ${paymentIntentId}, order: ${existingOrder.order_number}`)
+          return NextResponse.json({ received: true, orderId: existingOrder.id })
+        }
+      }
+
       // Get user cart items
       const userId = session.metadata?.user_id
       if (!userId) {
@@ -39,45 +54,80 @@ export async function POST(request: Request) {
         return NextResponse.json({ received: true })
       }
 
-      // Create order
+      // Create order with error handling
       const orderNumber = `WH-${nanoid(10).toUpperCase()}`
       const subtotal = cartItems.reduce((sum, item) =>
         sum + (Number(item.product.base_price) * item.quantity), 0
       )
 
-      await supabase.from('orders').insert({
-        user_id: userId,
-        order_number: orderNumber,
-        stripe_payment_intent_id: session.payment_intent as string,
-        subtotal,
-        total: Number(session.amount_total) / 100,
-        items: cartItems.map(item => ({
-          product_id: item.product.id,
-          name: item.product.name,
-          quantity: item.quantity,
-          price: Number(item.product.base_price),
-        })),
-        status: 'paid',
-      })
+      let orderId: string | null = null
 
-      // Clear cart
-      await supabase
-        .from('cart_items')
-        .delete()
-        .eq('user_id', userId)
-
-      // Send confirmation email
-      if (session.customer_email) {
-        await sendOrderConfirmation({
-          to: session.customer_email,
-          orderNumber,
+      try {
+        const { data: orderData, error: orderError } = await supabase.from('orders').insert({
+          user_id: userId,
+          order_number: orderNumber,
+          stripe_payment_intent_id: session.payment_intent as string,
+          subtotal,
           total: Number(session.amount_total) / 100,
           items: cartItems.map(item => ({
+            product_id: item.product.id,
             name: item.product.name,
             quantity: item.quantity,
             price: Number(item.product.base_price),
           })),
-        })
+          status: 'paid',
+        }).select('id').single()
+
+        if (orderError) {
+          console.error('Failed to create order:', orderError)
+          throw orderError
+        }
+
+        orderId = orderData?.id || null
+        console.log(`Order created successfully: ${orderNumber}`)
+      } catch (error) {
+        console.error('Critical error creating order:', error)
+        // Return error to Stripe so it will retry
+        return NextResponse.json(
+          { error: 'Failed to create order' },
+          { status: 500 }
+        )
+      }
+
+      // Clear cart (non-critical - log error but don't fail webhook)
+      try {
+        const { error: cartDeleteError } = await supabase
+          .from('cart_items')
+          .delete()
+          .eq('user_id', userId)
+
+        if (cartDeleteError) {
+          console.error('Failed to clear cart:', cartDeleteError)
+        } else {
+          console.log('Cart cleared successfully')
+        }
+      } catch (error) {
+        console.error('Non-critical error clearing cart:', error)
+      }
+
+      // Send confirmation email (non-critical - log error but don't fail webhook)
+      if (session.customer_email) {
+        try {
+          await sendOrderConfirmation({
+            to: session.customer_email,
+            orderNumber,
+            total: Number(session.amount_total) / 100,
+            items: cartItems.map(item => ({
+              name: item.product.name,
+              quantity: item.quantity,
+              price: Number(item.product.base_price),
+            })),
+          })
+          console.log('Confirmation email sent successfully')
+        } catch (error) {
+          console.error('Non-critical error sending confirmation email:', error)
+          // Could add to email retry queue here
+        }
       }
     }
 

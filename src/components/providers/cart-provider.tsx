@@ -1,6 +1,6 @@
 'use client'
 
-import { createContext, useContext, useState, useEffect, ReactNode } from 'react'
+import { createContext, useContext, useState, useEffect, ReactNode, useMemo, useCallback } from 'react'
 import { createClient } from '@/lib/supabase/client'
 import { nanoid } from 'nanoid'
 import { Database } from '@/types/database.types'
@@ -28,23 +28,44 @@ const CartContext = createContext<CartContextType | undefined>(undefined)
 export function CartProvider({ children }: { children: ReactNode }) {
   const [items, setItems] = useState<CartItem[]>([])
   const [isLoading, setIsLoading] = useState(true)
+  const [userId, setUserId] = useState<string | null>(null)
   const supabase = createClient()
 
-  // Load cart on mount
+  // Cache user ID and listen for auth changes
   useEffect(() => {
-    loadCart()
-  }, [])
+    // Get initial user
+    supabase.auth.getUser().then(({ data: { user } }) => {
+      setUserId(user?.id || null)
+    })
 
-  async function loadCart() {
+    // Listen for auth changes
+    const {
+      data: { subscription },
+    } = supabase.auth.onAuthStateChange((_event, session) => {
+      setUserId(session?.user?.id || null)
+    })
+
+    return () => {
+      subscription.unsubscribe()
+    }
+  }, [supabase])
+
+  // Load cart on mount and when user changes
+  useEffect(() => {
+    if (userId !== undefined) {
+      loadCart()
+    }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [userId])
+
+  const loadCart = useCallback(async () => {
     try {
-      const { data: { user } } = await supabase.auth.getUser()
-
       let query = supabase
         .from('cart_items')
         .select('*, product:products(*)')
 
-      if (user) {
-        query = query.eq('user_id', user.id)
+      if (userId) {
+        query = query.eq('user_id', userId)
       } else {
         const sessionId = getOrCreateSessionId()
         query = query.eq('session_id', sessionId)
@@ -60,22 +81,20 @@ export function CartProvider({ children }: { children: ReactNode }) {
     } finally {
       setIsLoading(false)
     }
-  }
+  }, [supabase, userId])
 
-  async function addItem(product: Product) {
+  const addItem = useCallback(async (product: Product) => {
     try {
-      const { data: { user } } = await supabase.auth.getUser()
-
       const item = {
         product_id: product.id,
         quantity: 1,
         price_snapshot: product.base_price,
-        ...(user ? { user_id: user.id } : { session_id: getOrCreateSessionId() })
+        ...(userId ? { user_id: userId } : { session_id: getOrCreateSessionId() })
       }
 
       const { data, error } = await supabase
         .from('cart_items')
-        .upsert(item, { onConflict: user ? 'user_id,product_id' : 'session_id,product_id' })
+        .upsert(item, { onConflict: userId ? 'user_id,product_id' : 'session_id,product_id' })
         .select('*, product:products(*)')
         .single()
 
@@ -98,69 +117,93 @@ export function CartProvider({ children }: { children: ReactNode }) {
       console.error('Error adding to cart:', error)
       throw error
     }
-  }
+  }, [supabase, userId])
 
-  async function removeItem(itemId: string) {
+  const removeItem = useCallback(async (itemId: string) => {
+    // Store previous state for rollback
+    const previousItems = items
+
     try {
+      // Optimistic update
+      setItems(prev => prev.filter(i => i.id !== itemId))
+
       const { error } = await supabase
         .from('cart_items')
         .delete()
         .eq('id', itemId)
 
       if (error) throw error
-
-      setItems(prev => prev.filter(i => i.id !== itemId))
     } catch (error) {
+      // Rollback on error
+      setItems(previousItems)
       console.error('Error removing from cart:', error)
       throw error
     }
-  }
+  }, [supabase, items])
 
-  async function updateQuantity(itemId: string, quantity: number) {
+  const updateQuantity = useCallback(async (itemId: string, quantity: number) => {
     if (quantity <= 0) {
       return removeItem(itemId)
     }
 
+    // Store previous state for rollback
+    const previousItems = items
+
     try {
+      // Optimistic update
+      setItems(prev =>
+        prev.map(i => (i.id === itemId ? { ...i, quantity } : i))
+      )
+
       const { error } = await supabase
         .from('cart_items')
         .update({ quantity })
         .eq('id', itemId)
 
       if (error) throw error
-
-      setItems(prev =>
-        prev.map(i => (i.id === itemId ? { ...i, quantity } : i))
-      )
     } catch (error) {
+      // Rollback on error
+      setItems(previousItems)
       console.error('Error updating quantity:', error)
       throw error
     }
-  }
+  }, [supabase, removeItem, items])
 
-  async function clearCart() {
+  const clearCart = useCallback(async () => {
+    // Store previous state for rollback
+    const previousItems = items
+
     try {
-      const { data: { user } } = await supabase.auth.getUser()
+      // Optimistic update
+      setItems([])
 
-      if (user) {
-        await supabase.from('cart_items').delete().eq('user_id', user.id)
+      if (userId) {
+        const { error } = await supabase.from('cart_items').delete().eq('user_id', userId)
+        if (error) throw error
       } else {
         const sessionId = getOrCreateSessionId()
-        await supabase.from('cart_items').delete().eq('session_id', sessionId)
+        const { error } = await supabase.from('cart_items').delete().eq('session_id', sessionId)
+        if (error) throw error
       }
-
-      setItems([])
     } catch (error) {
+      // Rollback on error
+      setItems(previousItems)
       console.error('Error clearing cart:', error)
       throw error
     }
-  }
+  }, [supabase, userId, items])
 
-  const totalItems = items.reduce((sum, item) => sum + item.quantity, 0)
-  const totalPrice = items.reduce(
-    (sum, item) => sum + Number(item.product.base_price) * item.quantity,
-    0
-  )
+  // Memoize expensive calculations to prevent unnecessary recalculations
+  const totalItems = useMemo(() => {
+    return items.reduce((sum, item) => sum + item.quantity, 0)
+  }, [items])
+
+  const totalPrice = useMemo(() => {
+    return items.reduce(
+      (sum, item) => sum + Number(item.product.base_price) * item.quantity,
+      0
+    )
+  }, [items])
 
   return (
     <CartContext.Provider

@@ -5,6 +5,9 @@ import { AddToCartButton } from '@/components/cart/add-to-cart-button'
 import { Badge } from '@/components/ui/badge'
 import { Button } from '@/components/ui/button'
 import { formatPrice } from '@/lib/utils/format'
+import { Database } from '@/types/database.types'
+
+type ProductImage = Database['public']['Tables']['product_images']['Row']
 
 export const revalidate = 3600
 
@@ -74,15 +77,17 @@ export default async function ProductPage({ params }: PageProps) {
           </div>
 
           {/* Thumbnail Grid */}
-          {product.images && product.images.length > 0 && (
+          {product.images && Array.isArray(product.images) && product.images.length > 0 && (
             <div className="grid grid-cols-4 gap-2">
-              {product.images.slice(0, 4).map((img: any, index: number) => (
-                <div key={index} className="aspect-square bg-secondary rounded overflow-hidden relative">
+              {(product.images as ProductImage[]).slice(0, 4).map((img, index: number) => (
+                <div key={img.id || index} className="aspect-square bg-secondary rounded overflow-hidden relative">
                   <Image
-                    src={img}
-                    alt={`${product.name} ${index + 1}`}
+                    src={img.url}
+                    alt={img.alt_text || `${product.name} ${index + 1}`}
                     fill
                     className="object-cover"
+                    loading="lazy"
+                    sizes="(max-width: 1024px) 25vw, 15vw"
                   />
                 </div>
               ))}
