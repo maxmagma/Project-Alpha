@@ -121,7 +121,7 @@ export class EtsyScraper extends BaseScraper {
 
     const response = await fetch(`${this.apiUrl}/listings/active?${params}`, {
       headers: {
-        'x-api-key': this.config.apiKey,
+        'x-api-key': this.config.apiKey || '',
       },
     })
 
@@ -140,7 +140,7 @@ export class EtsyScraper extends BaseScraper {
   private async getListingImages(listingId: number): Promise<string[]> {
     const response = await fetch(`${this.apiUrl}/listings/${listingId}/images`, {
       headers: {
-        'x-api-key': this.config.apiKey,
+        'x-api-key': this.config.apiKey || '',
       },
     })
 
@@ -162,7 +162,7 @@ export class EtsyScraper extends BaseScraper {
     try {
       const response = await fetch(`${this.apiUrl}/shops/${shopId}`, {
         headers: {
-          'x-api-key': this.config.apiKey,
+          'x-api-key': this.config.apiKey || '',
         },
       })
 

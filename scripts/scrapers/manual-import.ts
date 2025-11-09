@@ -127,7 +127,7 @@ export class ManualImport extends BaseScraper {
         complete: (results) => {
           resolve(results.data as ManualProductRow[])
         },
-        error: (error) => {
+        error: (error: Error) => {
           reject(error)
         },
       })

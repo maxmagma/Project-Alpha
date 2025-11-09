@@ -107,7 +107,7 @@ export class AmazonScraper extends BaseScraper {
    */
   private async searchProducts(query: string): Promise<string[]> {
     const params = new URLSearchParams({
-      api_key: this.config.apiKey,
+      api_key: this.config.apiKey || '',
       type: 'search',
       amazon_domain: 'amazon.com',
       search_term: query,
@@ -139,7 +139,7 @@ export class AmazonScraper extends BaseScraper {
    */
   private async scrapeProduct(asin: string): Promise<ScrapedProduct | null> {
     const params = new URLSearchParams({
-      api_key: this.config.apiKey,
+      api_key: this.config.apiKey || '',
       type: 'product',
       amazon_domain: 'amazon.com',
       asin: asin,
