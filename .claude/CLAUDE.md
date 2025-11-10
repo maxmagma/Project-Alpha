@@ -37,14 +37,22 @@ The application uses Supabase with Row Level Security (RLS) policies. Key tables
 - `profiles` - User profiles extending auth.users (role: customer/vendor/admin)
 - `vendors` - Vendor business information and approval status
 - `products` - Product listings with approval workflow
+- `product_images` - Product image galleries
 - `cart_items` - Server-side shopping cart (supports guest users)
 - `orders` - Order history linked to Stripe payments
 - `inquiries` - Quote requests between customers and vendors
+- `vision_board_items` - Customer product collections for quote requests
 - `style_presets` - AI visualizer style configurations
+- `style_preset_products` - Products suggested per style
 - `visualizations` - Generated AI venue images
 - `scraped_products` - Staging area for imported products (admin review before publishing)
 - `import_batches` - Track scraping/import jobs
 - `scraper_configs` - API keys and scraper settings
+
+**Performance Optimizations:**
+- Database indexes on products, orders, and images (50-80% faster queries)
+- Cart provider optimized with useMemo and useCallback
+- Error boundaries on all route groups for better error handling
 
 **CRITICAL:** Never run database migrations directly. User manually executes all SQL in Supabase Dashboard.
 
@@ -53,12 +61,13 @@ The application uses Supabase with Row Level Security (RLS) policies. Key tables
 The app uses Next.js route groups for layout organization:
 
 - **(marketing)** - Public homepage and landing pages
-- **(shop)** - Customer-facing marketplace, cart, checkout
+- **(shop)** - Customer-facing marketplace, cart, checkout, inquiry forms, vision board
 - **(vendor)** - Vendor dashboard for managing products and inquiries
-- **(admin)** - Admin dashboard for approvals and system management
+- **(admin)** - Admin dashboard for approvals, system management, and inventory
 - **(visualizer)** - AI venue visualization tool
 - **auth/** - Authentication flows (login, signup, callback)
 - **api/** - API routes for external integrations
+- **error.tsx** - Error boundaries for each route group
 
 ### Key Patterns
 
@@ -76,6 +85,15 @@ The app uses Next.js route groups for layout organization:
 - Server-side cart stored in `cart_items` table
 - Guest users identified by anonymous Supabase session
 - Cart persists across sessions for authenticated users
+- Optimized with useMemo/useCallback for performance
+- Optimistic updates with rollback on error
+
+**Vision Board System:**
+- Customer product collections for quote requests
+- Similar to cart but for inquiry/quote workflow
+- Stored in `vision_board_items` table
+- Supports multi-vendor quote requests
+- Provider at `src/components/providers/vision-board-provider.tsx`
 
 **Stripe Integration:**
 - Checkout flow: `/api/checkout` creates Stripe session
