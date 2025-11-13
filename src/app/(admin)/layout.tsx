@@ -10,10 +10,10 @@ export default async function AdminLayout({
 }: {
   children: React.ReactNode
 }) {
-  const supabase = await createClient()
+  // TESTING MODE - Auth checks disabled for development
+  const TESTING_MODE = true
 
-  // Demo mode - skip auth checks
-  if (!supabase) {
+  if (TESTING_MODE) {
     return (
       <div className="min-h-screen bg-secondary/30">
         <header className="border-b bg-background">
@@ -27,7 +27,7 @@ export default async function AdminLayout({
             </div>
             <div className="flex items-center gap-4">
               <span className="text-sm text-muted-foreground">
-                demo@admin.com (Demo Mode)
+                admin@testing.com (Testing Mode - No Auth)
               </span>
             </div>
           </div>
@@ -49,6 +49,7 @@ export default async function AdminLayout({
     )
   }
 
+  const supabase = await createClient()
   const { data: { user } } = await supabase.auth.getUser()
 
   if (!user) {

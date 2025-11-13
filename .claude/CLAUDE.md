@@ -384,6 +384,22 @@ Always add to `.gitignore`:
 - `.env.local` - Environment variables (already excluded)
 - `node_modules/` - Dependencies (already excluded)
 
+## Workflow Documentation
+
+**Complete workflow documentation with technical details and UI mockups:**
+
+See `/docs/workflows/` for comprehensive workflow documentation:
+- [Product Discovery & Import](../docs/workflows/01-product-discovery-import.md) - Scraping, AI categorization, staging
+- [Admin Review & Approval](../docs/workflows/02-admin-review-approval.md) - Product curation and publishing
+- [Customer Shopping](../docs/workflows/03-customer-shopping.md) - Browse, search, filter marketplace
+- [Vision Board & Inquiry](../docs/workflows/04-vision-board-inquiry.md) - Multi-vendor quote requests
+- [Vendor Management](../docs/workflows/05-vendor-management.md) - Inquiry responses, availability updates
+- [Checkout & Order](../docs/workflows/06-checkout-order.md) - Stripe integration, order processing
+
+**Technical Reference:**
+- [Database Schema](../docs/workflows/07-database-schema.md) - Complete schema with relationships
+- [API Endpoints](../docs/workflows/08-api-endpoints.md) - All routes with examples
+
 ## Common Workflows
 
 **Adding a new product field:**
@@ -392,12 +408,14 @@ Always add to `.gitignore`:
 3. Update Zod schema in `src/lib/validations/product.ts`
 4. Update product form in vendor dashboard
 5. Update product display components
+6. See [Database Schema Reference](../docs/workflows/07-database-schema.md)
 
 **Creating a new API endpoint:**
 1. Create route handler in `src/app/api/`
 2. Use `createClient()` from `@/lib/supabase/server`
 3. Validate input with Zod schemas
 4. Return NextResponse with proper status codes
+5. See [API Endpoints Reference](../docs/workflows/08-api-endpoints.md)
 
 **Adding a new user role:**
 1. Update `user_role` enum in database
